@@ -18,16 +18,6 @@ export default function RootLayout({
       {/* bg-slate-300 for bluish background bg-gray-50 is for gray */}
       <body className={`${inter.className} bg-slate-300 text-gray-`}> 
         {children}</body>
-
-      
-      <head>
-        <h1>
-          Hello, I am Sanjay Karunamoorthy.
-        </h1>
-        <h3>
-          Third Year CS + Math Major at the University of Virginia.
-        </h3>
-      </head>
     </html>
   )
 }
