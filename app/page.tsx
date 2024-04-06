@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import {Metadata} from "next";
+import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Sanjay Karunamoorthy | My Portfolio",
@@ -10,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="bg-black">
-      Front Page
+    <section className="space-y-6">
+      Page is Under Construction :)
     </section>
   )
 }
