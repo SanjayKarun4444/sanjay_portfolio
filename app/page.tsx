@@ -1,18 +1,23 @@
-import Image from 'next/image'
-import {Metadata} from "next";
-import "./globals.css"
+import Image from 'next/image';
+import { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Sanjay Karunamoorthy | My Portfolio",
   description: "Sanjay is a 3rd year Student at the University of Virginia.",
 }
 
-//  bg-[url('/img.jpg')] bg-cover bg-center bg-no-repeat px-1 py-8
-
-export default function Home() {
+const Home = () => {
   return (
-    <section className="space-y-6">
-      Page is Under Construction :)
-    </section>
+    <div className="flex justify-center items-center h-screen">
+      <section className="text-center">
+        <Image src="/underConstruction.jpeg" alt="Construction" width={400} height={400} />
+        <div className="space-y-6">
+          <p>Page is Under Construction :)</p>
+        </div>
+      </section>
+    </div>
   )
 }
+
+export default Home;
