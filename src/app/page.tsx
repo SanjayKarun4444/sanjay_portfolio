@@ -34,13 +34,12 @@ const Home = () => {
               alt="pic of me"
               height={400}
               width={400}
-              className="rounded-full border-4 object-cover cropped-image"
-              style={{ objectFit: 'cover', objectPosition: 'left', overflow: 'hidden' }}
+              className="rounded-full card custom-border"
             />
           </div>
 
           <div>
-            <h1>I produce music and code for fun!</h1>
+            <h1> HELLOOO</h1>
           </div>
         </div>
 
@@ -51,3 +50,5 @@ const Home = () => {
 }
 
 export default Home;
+
+
