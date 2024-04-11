@@ -2,6 +2,10 @@ import Image from 'next/image';
 import { Metadata } from "next";
 import "./globals.css";
 import { H1 } from '@/components/ui/H1';
+import { H2 } from '@/components/ui/H2';
+import { H3 } from '@/components/ui/H3';
+
+import me from '/public/gradpichs.jpg'
 
 
 export const metadata: Metadata = {
@@ -19,8 +23,25 @@ const Home = () => {
         {/* <Image src="/underConstruction.jpeg" alt="Construction" width={400} height={400} /> */}
         <div className="space-y-3">
           <H1 className="text-center sm:text-start">Hi, My Name&apos;s Sanjay!</H1>
-          <p className='text-center sm:text-start'> I'm a 3rd year at UVA. im making this bc im bored.
-          i love problem solving, thinking through problem, and learning new things, like making this website.</p>
+          <p className='text-center sm:text-start'> I&apos;m a 3rd year at UVA. im making this bc im bored.
+          i love problem solving and learning new things, like making this website.</p>
+        </div>
+
+        <div className="flex justify-between items-center"> {/* Use justify-between for horizontal alignment */}
+          <div className="flex justify-left"> {/* Set flex to left-align the image */}
+            <Image
+              src={me}
+              alt="pic of me"
+              height={400}
+              width={400}
+              className="rounded-full border-4 object-cover cropped-image"
+              style={{ objectFit: 'cover', objectPosition: 'left', overflow: 'hidden' }}
+            />
+          </div>
+
+          <div>
+            <h1>I produce music and code for fun!</h1>
+          </div>
         </div>
 
       </section>

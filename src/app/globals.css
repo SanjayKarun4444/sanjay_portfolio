@@ -60,3 +60,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+.cropped-image {
+  clip-path: ellipse(40% 60% at center);
+  object-position: 1000px 20px;
+}
+
