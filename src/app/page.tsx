@@ -40,7 +40,7 @@ const Home = () => {
           </div>
 
           <div>
-            <h1>I produce music and code for fun!</h1>
+            <h1>I love music and code for fun!</h1>
           </div>
         </div>
 
