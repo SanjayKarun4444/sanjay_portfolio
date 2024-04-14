@@ -27,21 +27,22 @@ const Home = () => {
           i love problem solving and learning new things, like making this website.</p>
         </div>
 
-        <div className="flex justify-between items-center"> {/* Use justify-between for horizontal alignment */}
-          <div className="flex justify-left"> {/* Set flex to left-align the image */}
+        {/* <div className="flex justify-between items-center"> 
+          <div className="flex justify-left"> 
             <Image
               src={me}
               alt="pic of me"
               height={400}
               width={400}
-              className="rounded-full card custom-border"
+              className="rounded-full border-4 object-cover cropped-image"
+              style={{ objectFit: 'cover', objectPosition: 'left', overflow: 'hidden' }}
             />
           </div>
 
           <div>
-            <h1>I love music and code for fun!</h1>
+            <h1>I produce music and code for fun!</h1>
           </div>
-        </div>
+        </div> */}
 
       </section>
       
