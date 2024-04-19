@@ -38,7 +38,7 @@ const Home = () => {
         <p>
           Click the little <Bot className="inline pb-1" /> icon in the top bar to activate
           the AI chat. You can ask the chatbot any questions about me and it will find relevant info on this website.
-          The bot can even provide links to pages you're looking for.
+          The bot can even provide links to pages you&apos;re looking for.
         </p>
         <br /><br />
         <H2 className='display:flex; justify-content:center; align-items:center;'>ChatBot is Currently Being Built.</H2>
