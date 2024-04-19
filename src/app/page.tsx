@@ -42,6 +42,7 @@ const Home = () => {
         </p>
         <br /><br />
         <H2 className='display:flex; justify-content:center; align-items:center;'>ChatBot is Currently Being Built.</H2>
+        <br />
       </section>
     </section>
   );
