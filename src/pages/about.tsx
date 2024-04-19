@@ -7,14 +7,14 @@ import { H1 } from "@/components/ui/H1"
 import Navbar from "@/components/Navbar"
 import { Layout } from "lucide-react";
 
-import ThemeToggle from "../components/ThemeToggle"
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 
 
 export default function about(){
     
     return (
-        <div>
+        <ThemeProvider attribute="class">
             <div>
                 <Navbar/>
             </div>
@@ -26,7 +26,7 @@ export default function about(){
                     <Link href="/">Go back to Home</Link>
                 </div>
             </section>
-        </div>
+        </ThemeProvider>
     )
     
 

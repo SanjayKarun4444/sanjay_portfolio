@@ -3,12 +3,14 @@ import { H1 } from "@/components/ui/H1"
 import Navbar from "@/components/Navbar"
 import "../app/globals.css";
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+
 
 
 export default function projects(){
 
     return(
-        <section className= "space-y-16 bg-cover  bg-no-repeat px-1 py-8" > 
+        <ThemeProvider attribute="class">
             <div>
 
                 <Navbar/>
@@ -16,7 +18,7 @@ export default function projects(){
                 
                 <Link href="/">Go back to Home</Link>
             </div>
-        </section>
+        </ThemeProvider>
 
     )
 
