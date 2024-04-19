@@ -12,6 +12,7 @@ import Navbar from "@/components/Navbar"
 import { Layout } from "lucide-react";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Footer from "@/components/Footer";
 
 
 export default function about() {
@@ -37,7 +38,7 @@ export default function about() {
                         </section>
                         <br /><br />
 
-                        
+
 
                         <div className="text-center">
                             <Link href="/">Go back to Home</Link>
@@ -46,6 +47,9 @@ export default function about() {
                 </section>
             </main>
 
+            <div>
+                <Footer />
+            </div>
             
         </ThemeProvider>
     )

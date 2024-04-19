@@ -5,6 +5,8 @@ import { H3 } from '@/components/ui/H3';
 
 
 import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer";
+
 import "../app/globals.css";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -42,6 +44,10 @@ export default function projects(){
                     </div>
                 </section>
             </main>
+
+            <div>
+                <Footer />
+            </div>
 
             
         </ThemeProvider>
