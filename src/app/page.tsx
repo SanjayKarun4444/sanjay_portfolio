@@ -22,7 +22,7 @@ const Home = () => {
       <section className='grid grid-cols-1 items-center gap-8'>
         
         <div className="space-y-3">
-          <H1 className="text-center sm:text-start">Hi, I&apos; Sanjay!</H1>
+          <H1 className="text-center sm:text-start">Hi, I&apos;m Sanjay!</H1>
           <p className='text-center sm:text-start'> I&apos;m a 3rd year at UVA. im making this bc im bored.
           i love problem solving and learning new things, like making this website.</p>
         </div>
