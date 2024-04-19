@@ -37,11 +37,10 @@ const Home = () => {
         <H2>Ask the chatbot below anything you want about me</H2>
         <p>
           Click the little <Bot className="inline pb-1" /> icon in the top bar to activate
-          the AI chat. You can ask the chatbot any questions about me and it will find relevant info on this website.
-          The bot can even provide links to pages you&apos;re looking for.
+          the AI chat. 
         </p>
         <br /><br />
-        <H2 className='display:flex; justify-content:center; align-items:center;'>ChatBot is Currently Being Built.</H2>
+        <H2 className='display:flex; justify-content:center; align-items:center;'>ChatBot is Work in Progress.</H2>
         <br />
       </section>
     </section>
