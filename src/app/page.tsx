@@ -28,8 +28,8 @@ const Home = () => {
           </div>
           <br /> <br /> <br />
 
-          <p className='text-center sm:text-start'> I&apos;m a 3rd year at UVA. I'm making this because I'm bored.
-            I love problem solving and learning new things, like making this website.</p>
+          {/* <p className='text-center sm:text-start'> I&apos;m a 3rd year at UVA. I'm making this because I'm bored.
+            I love problem solving and learning new things, like making this website.</p> */}
         </div>
       </section>
 
