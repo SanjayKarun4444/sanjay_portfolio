@@ -16,11 +16,11 @@ interface ProjectCardProps {
 
 // Define a reusable ProjectCard component
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, stack, dateRange }) => (
-    <div className="bg-white shadow-md p-6 rounded-lg">
+    <div className="shadow-md p-6 rounded-lg">
       <h2 className="text-lg font-semibold">{title}</h2>
-      <p className="text-gray-600">{description}</p>
-      <p className="text-gray-500 mt-2">{stack}</p>
-      <p className="text-gray-500 mt-2">{dateRange}</p>
+      <p className="text-white-600">{description}</p>
+      <p className="text-white-500 mt-2">{stack}</p>
+      <p className="text-white-500 mt-2">{dateRange}</p>
     </div>
   );
 
@@ -36,7 +36,7 @@ export default function Projects() {
           <div className="max-w-4xl mx-auto">
             <H1 className="text-center">My Projects</H1>
             <br />
-            {/* Render Project Cards */}
+            {/* Rendering Project Cards */}
             <section className="grid grid-cols-1 gap-8">
                 {/* Project 1 */}
                 <ProjectCard

@@ -19,7 +19,7 @@ const SkillsSection = () => (
     <section className="space-y-8">
       <H2 className="text-center">Skills</H2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="bg-white rounded-lg shadow-md p-4">
+        <div className="rounded-lg shadow-md p-4">
           <h3 className="text-lg font-semibold mb-2 text-center">Languages</h3>
           <ul className="text-center"> {/* removed list-disc and pl-5*/}
             <li>Java</li>
@@ -31,7 +31,7 @@ const SkillsSection = () => (
             <li>HTML</li>
           </ul>
         </div>
-        <div className="bg-white rounded-lg shadow-md p-4">
+        <div className="rounded-lg shadow-md p-4">
           <h3 className="text-lg font-semibold mb-2 text-center">Technologies</h3>
           <ul className="text-center">
             <li>React</li>
@@ -66,7 +66,7 @@ const SkillsSection = () => (
                 <div className="space-y-3">
                   <H2 className="text-center sm:text-left">Who am I?</H2>
                   <p className="text-center sm:text-left">
-                    I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science. I am passionate about solving problems
+                    I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science and B.A in Mathematics. I am passionate about solving problems
                     and learning different things.
                   </p>
                 </div>
