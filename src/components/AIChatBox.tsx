@@ -21,7 +21,7 @@ export default function AIChatBox({open, onClose} : AIChatBoxProps) {
         setMessages,
         isLoading,
         error,
-    } = useChat({}); // /api/chat
+    } = useChat(); // /api/chat
 
 
     const inputRef = useRef<HTMLInputElement>(null);

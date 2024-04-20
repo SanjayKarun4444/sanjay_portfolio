@@ -34,7 +34,7 @@ const Home = () => {
       </section>
 
       <section className="space-y-3 text-center">
-        <H2>Ask the chatbot below anything you want about me</H2>
+        <H2>Ask the chatbot anything you want about me</H2>
         <p>
           Click the little <Bot className="inline pb-1" /> icon in the top bar to activate
           the AI chat. 
