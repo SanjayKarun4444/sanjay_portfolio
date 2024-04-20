@@ -34,16 +34,16 @@ const SkillsSection = () => (
         <div className="bg-white rounded-lg shadow-md p-4">
           <h3 className="text-lg font-semibold mb-2 text-center">Technologies</h3>
           <ul className="text-center">
-            <li>Git</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Next.js</li>
             <li>TensorFlow</li>
             <li>PyTorch</li>
             <li>AWS (S3, EC2)</li>
             <li>Django</li>
             <li>MongoDB</li>
             <li>Express</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Next.js</li>
+            <li>Git</li>
           </ul>
         </div>
       </div>

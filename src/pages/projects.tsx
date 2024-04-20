@@ -7,15 +7,22 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
+interface ProjectCardProps {
+    title: string;
+    description: string;
+    stack: string;
+    dateRange: string;
+  }
+
 // Define a reusable ProjectCard component
-const ProjectCard = ({ title, description, stack, dateRange }) => (
-  <div className="bg-white shadow-md p-6 rounded-lg">
-    <h2 className="text-lg font-semibold">{title}</h2>
-    <p className="text-gray-600">{description}</p>
-    <p className="text-gray-500 mt-2">{stack}</p>
-    <p className="text-gray-500 mt-2">{dateRange}</p>
-  </div>
-);
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, stack, dateRange }) => (
+    <div className="bg-white shadow-md p-6 rounded-lg">
+      <h2 className="text-lg font-semibold">{title}</h2>
+      <p className="text-gray-600">{description}</p>
+      <p className="text-gray-500 mt-2">{stack}</p>
+      <p className="text-gray-500 mt-2">{dateRange}</p>
+    </div>
+  );
 
 export default function Projects() {
   return (
