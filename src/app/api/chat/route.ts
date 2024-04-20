@@ -1,11 +1,11 @@
-import { Request, Response } from "express";
+import { NextApiRequest, NextApiResponse } from "next";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 import { ChatCompletionMessageParam } from "ai/prompts";
 import OpenAI from "openai";
 
-export async function POST(req: Request): Promise<void | Response> {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
-        const body = await req.json();
+        const body = req.body;
         const messages = body.messages;
 
         const openai = new OpenAI();
@@ -23,17 +23,12 @@ export async function POST(req: Request): Promise<void | Response> {
         });
 
         const stream = OpenAIStream(response);
-        // Return the stream directly
-        return new StreamingTextResponse(stream);
+        // Respond with the stream directly
+        res.send(new StreamingTextResponse(stream));
 
     } catch (error) {
         // Handle errors properly
         console.log(error);
-        return new Response(JSON.stringify({ error: "Internal server error" }), {
-            status: 500,
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
+        res.status(500).json({ error: "Internal server error" });
     }
 }
