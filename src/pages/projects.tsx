@@ -37,7 +37,7 @@ export default function Projects() {
             <H1 className="text-center">My Projects</H1>
             <br />
             {/* Rendering Project Cards */}
-            <section className="grid grid-cols-1 gap-8">
+            <section className="grid grid-cols-2 gap-8">
                 {/* Project 1 */}
                 <ProjectCard
                 title="TenantTalk"
