@@ -26,6 +26,7 @@ const SkillsSection = () => (
             <li>Python</li>
             <li>C</li>
             <li>JavaScript</li>
+            <li>Node.js</li>
             <li>SQLite</li>
             <li>CSS</li>
             <li>HTML</li>
@@ -35,7 +36,6 @@ const SkillsSection = () => (
           <h3 className="text-lg font-semibold mb-2 text-center">Technologies</h3>
           <ul className="text-center">
             <li>React</li>
-            <li>Node.js</li>
             <li>Next.js</li>
             <li>TensorFlow</li>
             <li>PyTorch</li>
