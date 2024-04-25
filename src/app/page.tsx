@@ -124,6 +124,58 @@ const Home = () => {
               </div> */}
             </div>
       </section>
+      
+      {/* start here */}
+      <section className="space-y-16 bg-cover bg-no-repeat px-1 py-8">
+        <div className="max-w-4xl mx-auto">
+          <H1 className="text-center">Experience</H1>
+          <br />
+          {/* Experience Section */}
+          <section className="grid grid-cols-1 gap-8">
+            {/* Work Experience 1 */}
+            <div className="shadow-md p-6 rounded-lg">
+              <h2 className="text-center text-lg font-semibold">Machine Learning Intern</h2>
+              <p className="text-center text-white-600">HBDO, Washington, D.C</p>
+              <p className="text-center text-white-500 mt-2">February 2024 – Present</p>
+              <br />
+              <ul className="text-white-500">
+                <li>Head of the development of a cutting-edge Scalar Vector Machine (SVM) model to classify and detect potential cases of diabetes using extensive blood test data from a cohort of 10,000+ individuals.</li>
+              </ul>
+            </div>
+            
+            {/* Work Experience 2 */}
+            <div className="shadow-md p-6 rounded-lg">
+              <h2 className="text-center text-lg font-semibold">Full Stack SWE Intern</h2>
+              <p className="text-center text-white-600">SS Technology Consultants, Reston, VA</p>
+              <p className="text-center text-white-500 mt-2">December 2023 – Present</p>
+              <br />
+              <ul className="text-white-500">
+                <li>Tech Lead for a group of interns, leading weekly meetings, ensuring alignment with sprint goals while facilitating seamless communication.</li>
+                <li>Designed and implemented a secure back-end Authentication System with the MERN stack (MongoDB, Express, React, NodeJS). Exercising JWT and Bcrypt to increase overall security by over 60% based on pen-testing results.</li>
+                <li>Employed RESTful API endpoints for Registration, Login, and Sign-out functionalities, and Postman for development and testing.</li>
+                <li>Integrating hosting with AWS S3, Route 53, Cloudfront, EC2, Elastic IP, Nginx, and PM2 to augment scalability, emphasizing production and application architecture principles.</li>
+              </ul>
+            </div>
+
+            {/* Work Experience 3 */}
+            <div className="shadow-md p-6 rounded-lg">
+              <h2 className="text-center text-lg font-semibold">Web Development Intern</h2>
+              <p className="text-center text-white-600">SS Technology Consultants, Reston, VA</p>
+              <p className="text-center text-white-500 mt-2">May 2023 - December 2023</p>
+              <br />
+              <ul className="text-white-500">
+                <li>Led the transformation of the company website utilizing React, adhering to MVC architecture and Scrum methodology; collaborated closely with senior team members for mentorship and guidance to ensure successful project completion</li>
+                <li>Learned about UI/UX design principles, responsive web design, and performance optimization techniques.</li>
+              </ul>
+            </div>
+
+
+          </section>
+          <br /><br />
+        </div>
+      </section>
+      {/* end here */}
+      
 
       <section className="space-y-16 bg-cover bg-no-repeat px-1 py-8">
           <div className="max-w-4xl mx-auto">
