@@ -64,8 +64,8 @@ const SkillsSection = () => (
               <br />
               <section className="grid grid-cols-1 items-center gap-8">
                 <div className="space-y-3">
-                  <H2 className="text-center sm:text-left">Who am I?</H2>
-                  <p className="text-center sm:text-left">
+                  <H2 className="text-center">Who am I?</H2>
+                  <p className="text-center">
                     I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science and B.A in Mathematics. I am passionate about solving problems
                     and learning different things.
                   </p>

@@ -15,19 +15,28 @@ export const metadata: Metadata = {
 
 interface ProjectCardProps {
   title: string;
-  description: string;
+  description: string[];
   stack: string;
   dateRange: string;
 }
 
 // Define a reusable ProjectCard component
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, stack, dateRange }) => (
-  <div className="shadow-md p-6 rounded-lg">
-    <h2 className="text-center text-lg font-semibold">{title}</h2>
-    <p className="text-center text-white-600">{description}</p>
+  <div className="shadow-md p-6 rounded-lg flex flex-col justify-between">
+    <div>
+      <h2 className="text-lg font-semibold text-center">{title}</h2>
+      <br/>
+      <ul className="text-white-600 list-lower-roman" style={{ listStyleType: 'square' }}>
+        {description.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
     <br />
-    <p className="text-center text-white-500 mt-2">{stack}</p>
-    <p className="text-center text-white-500 mt-2">{dateRange}</p>
+    <div>
+      <p className="text-white-500 mt-2 text-center">{stack}</p>
+      <p className="text-white-500 mt-2 text-center">{dateRange}</p>
+    </div>
   </div>
 );
 
@@ -99,7 +108,7 @@ const Home = () => {
         <br />
       </section>
 
-      <br /><br /><br /> <br /> 
+      <br /><br />
 
       <section className="space-y-16 bg-cover bg-no-repeat px-1 py-8">
             <div className="max-w-4xl mx-auto">
@@ -138,7 +147,7 @@ const Home = () => {
               <p className="text-center text-white-600">HBDO, Washington, D.C</p>
               <p className="text-center text-white-500 mt-2">February 2024 – Present</p>
               <br />
-              <ul className="text-white-500">
+              <ul className="text-white-500 list-disc">
                 <li>Head of the development of a cutting-edge Scalar Vector Machine (SVM) model to classify and detect potential cases of diabetes using extensive blood test data from a cohort of 10,000+ individuals.</li>
               </ul>
             </div>
@@ -149,7 +158,7 @@ const Home = () => {
               <p className="text-center text-white-600">SS Technology Consultants, Reston, VA</p>
               <p className="text-center text-white-500 mt-2">December 2023 – Present</p>
               <br />
-              <ul className="text-white-500">
+              <ul className="text-white-500 list-disc">
                 <li>Tech Lead for a group of interns, leading weekly meetings, ensuring alignment with sprint goals while facilitating seamless communication.</li>
                 <li>Designed and implemented a secure back-end Authentication System with the MERN stack (MongoDB, Express, React, NodeJS). Exercising JWT and Bcrypt to increase overall security by over 60% based on pen-testing results.</li>
                 <li>Employed RESTful API endpoints for Registration, Login, and Sign-out functionalities, and Postman for development and testing.</li>
@@ -163,7 +172,7 @@ const Home = () => {
               <p className="text-center text-white-600">SS Technology Consultants, Reston, VA</p>
               <p className="text-center text-white-500 mt-2">May 2023 - December 2023</p>
               <br />
-              <ul className="text-white-500">
+              <ul className="text-white-500 list-disc">
                 <li>Led the transformation of the company website utilizing React, adhering to MVC architecture and Scrum methodology; collaborated closely with senior team members for mentorship and guidance to ensure successful project completion</li>
                 <li>Learned about UI/UX design principles, responsive web design, and performance optimization techniques.</li>
               </ul>
@@ -176,7 +185,7 @@ const Home = () => {
       </section>
       {/* end here */}
       
-
+      {/* Projects start here */}
       <section className="space-y-16 bg-cover bg-no-repeat px-1 py-8">
           <div className="max-w-4xl mx-auto">
             <H1 className="text-center">My Projects</H1>
@@ -185,41 +194,53 @@ const Home = () => {
             <section className="grid grid-cols-2 gap-8">
                 {/* Project 1 */}
                 <ProjectCard
-                title="TenantTalk"
-                description="Built a web app for rating landlords and property management, adhering to Scrum methodology with a team of 5 other developers through sprints and weekly meetings."
-                stack="Django, PostgreSQL, Heroku, AWS S3"
-                dateRange="Jan 2024 – Present"
+                    title="TenantTalk"
+                    description={[
+                        "Built a web app for rating landlords and property management, adhering to Scrum methodology with a team of 5 other developers through sprints and weekly meetings."
+                    ]}
+                    stack="Django, PostgreSQL, Heroku, AWS S3"
+                    dateRange="Jan 2024 – Present"
                 />
                 {/* Project 2 */}
                 <ProjectCard
-                title="Coccidiosis Classification"
-                description="Constructed a Convolutional Neural Network (CNN) to detect Coccidiosis signs in chicken images, with the use of over 1000 labeled images."
-                stack="Python, TensorFlow, Azure"
-                dateRange="Jan 2024 – March 2024"
+                    title="Coccidiosis Classification"
+                    description={[
+                        "Constructed a Convolutional Neural Network (CNN) to detect Coccidiosis signs in chicken images, with the use of over 1000 labeled images."
+                    ]}
+                    stack="Python, TensorFlow, Azure"
+                    dateRange="Jan 2024 – March 2024"
                 />
                 {/* Project 3 */}
                 <ProjectCard
-                title="Film Finder"
-                description="Created using Python and Jupyter Notebook with libraries like Numpy, sci-kit-learn, pickle, and requests. Integrated TMDB API for data retrieval, including plot summaries, genres, and ratings from over 5000 movies."
-                stack="Python, TensorFlow"
-                dateRange="Sept 2023 – Dec 2023"
+                    title="Film Finder"
+                    description={[
+                        "Created using Python and Jupyter Notebook with libraries like Numpy, sci-kit-learn, pickle, and requests.",
+                        "Integrated TMDB API for data retrieval, including plot summaries, genres, and ratings from over 5000 movies."
+                    ]}
+                    stack="Python, TensorFlow"
+                    dateRange="Sept 2023 – Dec 2023"
                 />
 
                 <ProjectCard
-                title="EzCite"
-                description="Lead developer of the website, utilizing React and Next.js. Leveraged a mix of the Perplexity LLM and Node.js modules such as discord.js and Puppeteer and the use of citation-machine to create optimal citations from an input of text."
-                stack="React, Next.js, Node.js, JavaScript, HTML, CSS"
-                dateRange="Mar 2024 – Mar 2024"
+                    title="EzCite"
+                    description={[
+                        "Lead developer of the website, utilizing React and Next.js.",
+                        "Leveraged a mix of the Perplexity LLM and Node.js modules such as discord.js and Puppeteer.",
+                        "Use of citation-machine to create optimal citations from an input of text."
+                    ]}
+                    stack="React, Next.js, Node.js, JavaScript, HTML, CSS"
+                    dateRange="Mar 2024 – Mar 2024"
                 />
 
                 <ProjectCard
-                title="Natural Language Processing Application"
-                description="Detects names, cities, states, and countries from given sentences. End-to-end development of a robust NER application leveraging the Stanford CoreNLP."
-                stack="Java, Spring Boot"
-                dateRange="Nov 2023 – Dec 2023"
+                    title="Natural Language Processing Application"
+                    description={[
+                        "Detects names, cities, states, and countries from given sentences.",
+                        "End-to-end development of a robust NER application leveraging the Stanford CoreNLP."
+                    ]}
+                    stack="Java, Spring Boot"
+                    dateRange="Nov 2023 – Dec 2023"
                 />
-
-
             </section>
             <br /><br />
             {/* <div className="text-center">
@@ -227,6 +248,7 @@ const Home = () => {
             </div> */}
           </div>
         </section>
+        {/* Project ends here */}
 
     </section>
   );

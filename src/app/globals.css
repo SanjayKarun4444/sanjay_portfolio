@@ -89,3 +89,8 @@
   height: 50px;
 }
 
+
+.social-icon:hover {
+  opacity: 0.8;
+  border-color: #ddd;  /* Change border color on hover */
+}
