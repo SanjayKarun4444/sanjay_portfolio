@@ -1,23 +1,23 @@
-// components/navbar.tsx
+import Link from "next/link"
+import ThemeToggle from "./ThemeToggle"
+import AIChatButton from "./AIChatButton"
+export default function navbar(){
+    return <header className = "sticky top-0 bg-background">
+        <div className="max-w-3xl mx-auto flex flex-wrap justify-between gap-3 px-3 py-4">
+            <nav className="space-x-4 font-medium">
+                <Link href="/">Home</Link>
+                <Link href="/about">About Me</Link>
+                <Link href="/projects">My Projects</Link>
+            </nav>
 
-import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
+            <div className="flex items-center gap-4">
+                <AIChatButton />
+                <ThemeToggle />
+            </div>
 
-const Navbar: React.FC = () => {
-  return (
-    <header className="sticky top-0 bg-background">
-      <div className="max-w-3xl mx-auto flex flex-wrap justify-between gap-3 px-3 py-4">
-        <nav className="space-x-4 font-medium">
-          <Link href="/">Home</Link>
-          <Link href="/AboutMe">About Me</Link> {/* Make sure casing matches */}
-          <Link href="/projects">Projects</Link>
-        </nav>
-        <div>
-          <ThemeToggle />
         </div>
-      </div>
-    </header>
-  );
-};
 
-export default Navbar;
+
+
+    </header>
+}
