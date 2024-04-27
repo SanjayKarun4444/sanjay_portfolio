@@ -21,71 +21,71 @@ const SkillsSection = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="rounded-lg shadow-md p-4">
           <h3 className="text-lg font-semibold mb-2 text-center">Languages</h3>
-          <ul className="text-center"> {/* removed list-disc and pl-5*/}
-            <li>Java</li>
-            <li>Python</li>
-            <li>C</li>
-            <li>JavaScript</li>
-            <li>Node.js</li>
-            <li>SQLite</li>
-            <li>CSS</li>
-            <li>HTML</li>
+          <ul className="text-center">
+            <li className="about-module_skillItem">Java</li>
+            <li className="about-module_skillItem">Python</li>
+            <li className="about-module_skillItem">C</li>
+            <li className="about-module_skillItem">JavaScript</li>
+            <li className="about-module_skillItem">Node.js</li>
+            <li className="about-module_skillItem">SQLite</li>
+            <li className="about-module_skillItem">CSS</li>
+            <li className="about-module_skillItem">HTML</li>
           </ul>
         </div>
         <div className="rounded-lg shadow-md p-4">
           <h3 className="text-lg font-semibold mb-2 text-center">Technologies</h3>
           <ul className="text-center">
-            <li>React</li>
-            <li>Next.js</li>
-            <li>TensorFlow</li>
-            <li>PyTorch</li>
-            <li>AWS (S3, EC2)</li>
-            <li>Django</li>
-            <li>MongoDB</li>
-            <li>Express</li>
-            <li>Git</li>
+            <li className="about-module_skillItem">React</li>
+            <li className="about-module_skillItem">Next.js</li>
+            <li className="about-module_skillItem">TensorFlow</li>
+            <li className="about-module_skillItem">PyTorch</li>
+            <li className="about-module_skillItem">AWS (S3, EC2)</li>
+            <li className="about-module_skillItem">Django</li>
+            <li className="about-module_skillItem">MongoDB</li>
+            <li className="about-module_skillItem">Express</li>
+            <li className="about-module_skillItem">Git</li>
           </ul>
         </div>
       </div>
     </section>
+);
+
+export default function About() {
+  return (
+    <ThemeProvider attribute="class">
+      <div>
+        <Navbar />
+      </div>
+
+      <main className="mx-auto max-w-3xl px-3 py-10">
+        <section className="space-y-16 bg-cover bg-no-repeat px-1 py-8">
+          <div className="max-w-4xl mx-auto">
+            <H1 className="text-center">About Me</H1>
+            <br />
+            <section className="grid grid-cols-1 items-center gap-8">
+              <div className="space-y-3">
+                <H2 className="text-center">Who am I?</H2>
+                <p className="text-center">
+                  I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science and B.A in Mathematics. I am passionate about solving problems
+                  and learning different things.
+                </p>
+              </div>
+            </section>
+            <br /><br />
+            
+            {/* Add the Skills Section */}
+            <SkillsSection />
+
+            {/* <div className="text-center">
+              <Link href="/">Go back to Home</Link>
+            </div> */}
+          </div>
+        </section>
+      </main>
+
+      <div>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
-  
-  export default function About() {
-    return (
-      <ThemeProvider attribute="class">
-        <div>
-          <Navbar />
-        </div>
-  
-        <main className="mx-auto max-w-3xl px-3 py-10">
-          <section className="space-y-16 bg-cover bg-no-repeat px-1 py-8">
-            <div className="max-w-4xl mx-auto">
-              <H1 className="text-center">About Me</H1>
-              <br />
-              <section className="grid grid-cols-1 items-center gap-8">
-                <div className="space-y-3">
-                  <H2 className="text-center">Who am I?</H2>
-                  <p className="text-center">
-                    I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science and B.A in Mathematics. I am passionate about solving problems
-                    and learning different things.
-                  </p>
-                </div>
-              </section>
-              <br /><br />
-              
-              {/* Add the Skills Section */}
-              <SkillsSection />
-  
-              {/* <div className="text-center">
-                <Link href="/">Go back to Home</Link>
-              </div> */}
-            </div>
-          </section>
-        </main>
-  
-        <div>
-          <Footer />
-        </div>
-      </ThemeProvider>
-    );
-  }
+}

@@ -48,29 +48,29 @@ const SkillsSection = () => (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <div className="rounded-lg shadow-md p-4">
         <h3 className="text-lg font-semibold mb-2 text-center">Languages</h3>
-        <ul className="text-center"> {/* removed list-disc and pl-5*/}
-          <li>Java</li>
-          <li>Python</li>
-          <li>C</li>
-          <li>JavaScript</li>
-          <li>Node.js</li>
-          <li>SQLite</li>
-          <li>CSS</li>
-          <li>HTML</li>
+        <ul className="text-center">
+          <li className="about-module_skillItem">Java</li>
+          <li className="about-module_skillItem">Python</li>
+          <li className="about-module_skillItem">C</li>
+          <li className="about-module_skillItem">JavaScript</li>
+          <li className="about-module_skillItem">Node.js</li>
+          <li className="about-module_skillItem">SQLite</li>
+          <li className="about-module_skillItem">CSS</li>
+          <li className="about-module_skillItem">HTML</li>
         </ul>
       </div>
       <div className="rounded-lg shadow-md p-4">
         <h3 className="text-lg font-semibold mb-2 text-center">Technologies</h3>
         <ul className="text-center">
-          <li>React</li>
-          <li>Next.js</li>
-          <li>TensorFlow</li>
-          <li>PyTorch</li>
-          <li>AWS (S3, EC2)</li>
-          <li>Django</li>
-          <li>MongoDB</li>
-          <li>Express</li>
-          <li>Git</li>
+          <li className="about-module_skillItem">React</li>
+          <li className="about-module_skillItem">Next.js</li>
+          <li className="about-module_skillItem">TensorFlow</li>
+          <li className="about-module_skillItem">PyTorch</li>
+          <li className="about-module_skillItem">AWS (S3, EC2)</li>
+          <li className="about-module_skillItem">Django</li>
+          <li className="about-module_skillItem">MongoDB</li>
+          <li className="about-module_skillItem">Express</li>
+          <li className="about-module_skillItem">Git</li>
         </ul>
       </div>
     </div>

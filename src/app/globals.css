@@ -94,3 +94,12 @@
   opacity: 0.8;
   border-color: #ddd;  /* Change border color on hover */
 }
+
+
+.about-module_skillItem {
+  transition: transform 0.3s ease-in-out; /* Add transition effect for smoother hover */
+}
+
+.about-module_skillItem:hover {
+  transform: scale(1.1); /* Scale up the skill item on hover */
+}
