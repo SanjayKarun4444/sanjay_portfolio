@@ -104,7 +104,7 @@ const Home = () => {
           the AI chat. 
         </p>
         <br /><br />
-        <H2 className='display:flex; justify-content:center; align-items:center;'>ChatBot is Work in Progress.</H2>
+        {/* <H2 className='display:flex; justify-content:center; align-items:center;'>ChatBot is Work in Progress.</H2> */}
         <br />
       </section>
 
