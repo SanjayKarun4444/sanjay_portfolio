@@ -145,7 +145,7 @@ const Home = () => {
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">Machine Learning Intern</h2>
               <p className="text-center text-white-600">HBDO, Washington, D.C</p>
-              <p className="text-center text-white-500 mt-2">February 2024 – Present</p>
+              <p className="text-center text-white-500 mt-2">February 2024 – May 2024</p>
               <br />
               <ul className="text-white-500 list-disc">
                 <li>Head of the development of a cutting-edge Scalar Vector Machine (SVM) model to classify and detect potential cases of diabetes using extensive blood test data from a cohort of 10,000+ individuals.</li>
@@ -156,13 +156,13 @@ const Home = () => {
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">Full Stack SWE Intern</h2>
               <p className="text-center text-white-600">SS Technology Consultants, Reston, VA</p>
-              <p className="text-center text-white-500 mt-2">December 2023 – Present</p>
+              <p className="text-center text-white-500 mt-2">December 2023 – May 2024</p>
               <br />
               <ul className="text-white-500 list-disc">
                 <li>Tech Lead for a group of interns, leading weekly meetings, ensuring alignment with sprint goals while facilitating seamless communication.</li>
                 <li>Designed and implemented a secure back-end Authentication System with the MERN stack (MongoDB, Express, React, NodeJS). Exercising JWT and Bcrypt to increase overall security by over 60% based on pen-testing results.</li>
                 <li>Employed RESTful API endpoints for Registration, Login, and Sign-out functionalities, and Postman for development and testing.</li>
-                <li>Integrating hosting with AWS S3, Route 53, Cloudfront, EC2, Elastic IP, Nginx, and PM2 to augment scalability, emphasizing production and application architecture principles.</li>
+                <li>Integrating hosting with Render to augment scalability, emphasizing production and application architecture principles.</li>
               </ul>
             </div>
 

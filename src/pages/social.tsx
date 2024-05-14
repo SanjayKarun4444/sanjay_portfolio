@@ -11,7 +11,7 @@ export default function Social() {
             <img src="/instagram_image.jpeg" alt="Instagram" className="h-5 w-5 rounded-full social-icon" /> {/* Added social-icon class */}
           </a>
           {/* SoundCloud */}
-          <a href="https://soundcloud.com/your_soundcloud_username" target="_blank" rel="noopener noreferrer" className="inline-block">
+          <a href="https://soundcloud.com/sanjay-karunamoorthy" target="_blank" rel="noopener noreferrer" className="inline-block">
             <img src="/soundcloud_image.png" alt="SoundCloud" className="h-5 w-5 rounded-full social-icon" />
           </a>
         </div>
