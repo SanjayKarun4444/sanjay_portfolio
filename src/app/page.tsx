@@ -141,11 +141,21 @@ const Home = () => {
           <br />
           {/* Experience Section */}
           <section className="grid grid-cols-1 gap-8">
+            {/* <div className="shadow-md p-6 rounded-lg">
+              <h2 className="text-center text-lg font-semibold">Software Engineering Intern</h2>
+              <p className="text-center text-white-600"></p>
+              <p className="text-center text-white-500 mt-2">May 2024 – Present</p>
+              <br />
+              <ul className="text-white-500 list-disc">
+                <li>Assigned to develop code to seamlessly read and parse through a Salesforce dataset to use on elastic search enterprise micro-service project</li>
+                <li>Crafted an efficient and robust data processing solution leveraging Spring Boot and Spring Batch, adeptly handling over 2,000,000 user data points.</li>
+              </ul>
+            </div> */}
             {/* Work Experience 1 */}
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">Machine Learning Intern</h2>
               <p className="text-center text-white-600">HBDO, Washington, D.C</p>
-              <p className="text-center text-white-500 mt-2">February 2024 – May 2024</p>
+              <p className="text-center text-white-500 mt-2">February 2024 – March 2024</p>
               <br />
               <ul className="text-white-500 list-disc">
                 <li>Head of the development of a cutting-edge Scalar Vector Machine (SVM) model to classify and detect potential cases of diabetes using extensive blood test data from a cohort of 10,000+ individuals.</li>
