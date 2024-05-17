@@ -158,7 +158,7 @@ const Home = () => {
               <p className="text-center text-white-500 mt-2">February 2024 – March 2024</p>
               <br />
               <ul className="text-white-500 list-disc">
-                <li>Head of the development of a cutting-edge Scalar Vector Machine (SVM) model to classify and detect potential cases of diabetes using extensive blood test data from a cohort of 10,000+ individuals.</li>
+                <li>Head of the development of a cutting-edge Scalar Vector Machine (SVM) model to classify and detect potential cases of diabetes using extensive blood test data from a cohort of 700+ individuals.</li>
               </ul>
             </div>
             
@@ -256,7 +256,7 @@ const Home = () => {
                     description={[
                         "Made this website and chatbot."
                     ]}
-                    stack="Next.js 14, Langchain, OpenAI API, Tailwind CSS"
+                    stack="Next.js 14, Langchain, OpenAI API, AstraDB, Tailwind CSS"
                     dateRange="Mar 2023 – Present"
                 />
             </section>

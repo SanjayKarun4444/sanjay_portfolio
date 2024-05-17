@@ -91,6 +91,15 @@ export default function Projects() {
                                 stack="Java, Spring Boot"
                                 dateRange="Nov 2023 – Dec 2023"
                             />
+
+                            <ProjectCard
+                                title="My Portfolio"
+                                description={[
+                                    "Made this website and chatbot."
+                                ]}
+                                stack="Next.js 14, Langchain, OpenAI API, AstraDB, Tailwind CSS"
+                                dateRange="Mar 2023 – Present"
+                            />
                         </section>
                         <br /><br />
                         {/* <div className="text-center">
