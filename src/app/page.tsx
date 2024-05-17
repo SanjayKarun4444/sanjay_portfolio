@@ -251,6 +251,14 @@ const Home = () => {
                     stack="Java, Spring Boot"
                     dateRange="Nov 2023 – Dec 2023"
                 />
+                <ProjectCard
+                    title="My Portfolio"
+                    description={[
+                        "Made this website and chatbot."
+                    ]}
+                    stack="Next.js 14, Langchain, OpenAI API, Tailwind CSS"
+                    dateRange="Mar 2023 – Present"
+                />
             </section>
             <br /><br />
             {/* <div className="text-center">
