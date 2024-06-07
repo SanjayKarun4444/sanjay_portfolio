@@ -158,8 +158,7 @@ const Home = () => {
               <p className="text-center text-white-500 mt-2">May 2024 – Present</p>
               <br />
               <ul className="text-white-500 list-disc">
-                <li></li>
-                
+                <li>Preprocessing data, vectorizing for semantic search through RAG.</li>
               </ul>
             </div>
 
