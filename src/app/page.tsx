@@ -152,15 +152,26 @@ const Home = () => {
               </ul>
             </div> */}
             {/* Work Experience 1 */}
-            {/* <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">Machine Learning Intern</h2>
+            <div className="shadow-md p-6 rounded-lg">
+              <h2 className="text-center text-lg font-semibold">Software Engineer Intern</h2>
+              <p className="text-center text-white-600">In progress</p>
+              <p className="text-center text-white-500 mt-2">May 2024 – Present</p>
+              <br />
+              <ul className="text-white-500 list-disc">
+                <li></li>
+                
+              </ul>
+            </div>
+
+            <div className="shadow-md p-6 rounded-lg">
+              <h2 className="text-center text-lg font-semibold">ML Engineer</h2>
               <p className="text-center text-white-600">HBDO, Washington, D.C</p>
               <p className="text-center text-white-500 mt-2">February 2024 – March 2024</p>
               <br />
               <ul className="text-white-500 list-disc">
                 <li>Head of the development of a cutting-edge Scalar Vector Machine (SVM) model to classify and detect potential cases of diabetes using extensive blood test data from a cohort of 700+ individuals.</li>
               </ul>
-            </div> */}
+            </div> 
             
             {/* Work Experience 2 */}
             <div className="shadow-md p-6 rounded-lg">
