@@ -269,6 +269,25 @@ const Home = () => {
                     stack="Next.js 14, Langchain, OpenAI API, AstraDB, Tailwind CSS"
                     dateRange="Mar 2023 – Present"
                 />
+                <ProjectCard
+                    title="European Option Pricing"
+                    description={[
+                        "Developed a Monte Carlo simulation-based pricing model for European vanilla options in C++" +  
+                        "using risk-neutral pricing, Geometric Brownian Motion, and the Box-Muller algorithm, achieving" 
+                        + "results closely matching Black-Scholes solutions."
+                    ]}
+                    stack="Python"
+                    dateRange="May 2024 – June 2024"
+                />
+                <ProjectCard
+                    title="Poker Bot"
+                    description={[
+                        "Used a Monte Carlo counterfactual regret minimization algorithm to develop a 2-player Texas hold’em poker bot"
+                    ]}
+                    stack="Python"
+                    dateRange="June 2024 – Present"
+                />
+                
             </section>
             <br /><br />
             {/* <div className="text-center">
