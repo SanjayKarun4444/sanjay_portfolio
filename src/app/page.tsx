@@ -276,7 +276,7 @@ const Home = () => {
                         "using risk-neutral pricing, Geometric Brownian Motion, and the Box-Muller algorithm, achieving" 
                         + "results closely matching Black-Scholes solutions."
                     ]}
-                    stack="Python"
+                    stack="C++"
                     dateRange="May 2024 – June 2024"
                 />
                 <ProjectCard
