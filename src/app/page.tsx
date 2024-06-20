@@ -152,7 +152,7 @@ const Home = () => {
               </ul>
             </div> */}
             {/* Work Experience 1 */}
-            <div className="shadow-md p-6 rounded-lg">
+            {/* <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">Software Engineer Intern</h2>
               <p className="text-center text-white-600">In progress</p>
               <p className="text-center text-white-500 mt-2">May 2024 – Present</p>
@@ -160,7 +160,7 @@ const Home = () => {
               <ul className="text-white-500 list-disc">
                 <li>Preprocessing data, vectorizing for semantic search for RAG.</li>
               </ul>
-            </div>
+            </div> */}
 
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">ML Engineer</h2>
@@ -284,7 +284,7 @@ const Home = () => {
                     description={[
                         "Used a Monte Carlo counterfactual regret minimization algorithm to develop a 2-player Texas hold’em poker bot"
                     ]}
-                    stack="F#, JavaScript, Python"
+                    stack="Python"
                     dateRange="June 2024 – Present"
                 />
                 
