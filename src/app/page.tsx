@@ -284,7 +284,7 @@ const Home = () => {
                     description={[
                         "Used a Monte Carlo counterfactual regret minimization algorithm to develop a 2-player Texas hold’em poker bot"
                     ]}
-                    stack="Python"
+                    stack="F#, JavaScript, Python"
                     dateRange="June 2024 – Present"
                 />
                 
