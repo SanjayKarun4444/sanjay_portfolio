@@ -148,8 +148,6 @@ const Home = () => {
               <p className="text-center text-white-500 mt-2">May 2024 – Present</p>
               <br />
               <ul className="text-white-500 list-disc">
-                <li>Assigned to develop code to seamlessly read and parse through a Salesforce dataset to use on elastic search enterprise micro-service project</li>
-                <li>Crafted an efficient and robust data processing solution leveraging Spring Boot and Spring Batch, adeptly handling over 2,000,000 user data points.</li>
               </ul>
             </div> */}
             {/* Work Experience 1 */}
