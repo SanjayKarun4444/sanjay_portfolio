@@ -91,25 +91,28 @@ const Home = () => {
           <div className="container">
             <TypeAnimation />
           </div>
-          <br /> <br /> <br />
+          <br />
 
           {/* <p className='text-center sm:text-start'> I&apos;m a 3rd year at UVA. I'm making this because I'm bored.
             I love problem solving and learning new things, like making this website.</p> */}
         </div>
       </section>
-
+      <p className='space-y-3 text-center font-extralight'>
+          If the ChatBot tells you something went wrong, please email me at sanjaykarun@gmail.com
+          to remind me to take AstraDB out of hibernation. Thanks.
+        </p>
+        <br></br>
       <section className="space-y-3 text-center">
         <H2>Ask the chatbot anything you want about me</H2>
         <p>
           Click the little <Bot className="inline pb-1" /> icon in the top bar to activate
-          the AI chat. 
+          the AI chat.
         </p>
-        <br /><br />
+        
         {/* <H2 className='display:flex; justify-content:center; align-items:center;'>ChatBot is Work in Progress.</H2> */}
         <br />
       </section>
 
-      <br /><br />
 
       <section className="space-y-16 bg-cover bg-no-repeat px-1 py-8">
             <div className="max-w-4xl mx-auto">
