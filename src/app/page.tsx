@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, stack, da
     <div>
       <h2 className="text-lg font-semibold text-center">{title}</h2>
       <br/>
-      <ul className="text-white-600 list-lower-roman" style={{ listStyleType: 'square' }}>
+      <ul className="text-white-600 list-lower-roman project-list">
         {description.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
@@ -154,17 +154,24 @@ const Home = () => {
               </ul>
             </div> */}
             {/* Work Experience 1 */}
-            {/* <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">Software Engineer Intern</h2>
-              <p className="text-center text-white-600">In progress</p>
-              <p className="text-center text-white-500 mt-2">May 2024 – Present</p>
-              <br />
-              <ul className="text-white-500 list-disc">
-                <li>Preprocessing data, vectorizing for semantic search for RAG.</li>
-              </ul>
-            </div> */}
-
             <div className="shadow-md p-6 rounded-lg">
+              <h2 className="text-center text-lg font-semibold">Software Engineer Intern (Contract)</h2>
+              <p className="text-center text-white-600">3M</p>
+              <p className="text-center text-white-500 mt-2">May 2024 – August 2024</p>
+              <br />
+              <ul className="custom-list text-white-500 list-disc"
+                >
+                <li>Crafted an efficient and robust data processing solution leveraging Spring Boot and Spring Batch, adeptly handling over 2,000,000 data points from Salesforce, utilizing Swagger for API development.</li>
+                <br />
+                <li>Developed and deployed big data pipelines with Apache Airflow and Kafka, integrating streaming data seamlessly with batch processing, resulting in a 60% increase in processing efficiency.</li>
+                <br />
+                <li>Leveraged Amazon Bedrock for Natural Language Processing (NLP), employing Titan text embeddings to enable vectorized search for RAG, fine-tuning prompts for Anthropic Claude to generate context-relevant responses.</li>
+                <br />
+                <li>Integrated kNN vectors for embedding storage with lambda functions on OpenSearch, improving relevance by up to 50%.</li>
+              </ul>
+            </div>
+
+            {/* <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">ML Engineer</h2>
               <p className="text-center text-white-600">HBDO, Washington, D.C</p>
               <p className="text-center text-white-500 mt-2">February 2024 – March 2024</p>
@@ -172,30 +179,34 @@ const Home = () => {
               <ul className="text-white-500 list-disc">
                 <li>Head of the development of a cutting-edge Scalar Vector Machine (SVM) model to classify and detect potential cases of diabetes using extensive blood test data from a cohort of 700+ individuals.</li>
               </ul>
-            </div> 
+            </div>  */}
             
             {/* Work Experience 2 */}
             <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">Full Stack SWE Intern</h2>
-              <p className="text-center text-white-600">SS Technology Consultants, Reston, VA</p>
+              <h2 className="text-center text-lg font-semibold">SS Technology Consultants</h2>
+              <p className="text-center text-white-600">Full Stack SWE Intern, Reston, VA</p>
               <p className="text-center text-white-500 mt-2">December 2023 – May 2024</p>
               <br />
-              <ul className="text-white-500 list-disc">
+              <ul className="custom-list text-white-500 list-disc">
                 <li>Tech Lead for a group of interns, leading weekly meetings, ensuring alignment with sprint goals while facilitating seamless communication.</li>
+                <br />
                 <li>Designed and implemented a secure back-end Authentication System with the MERN stack (MongoDB, Express, React, NodeJS). Exercising JWT and Bcrypt to increase overall security by over 60% based on pen-testing results.</li>
+                <br />
                 <li>Employed RESTful API endpoints for Registration, Login, and Sign-out functionalities, and Postman for development and testing.</li>
-                <li>Integrating hosting with Render to augment scalability, emphasizing production and application architecture principles.</li>
+                <br />
+                <li>Configured and managed EC2 instances to ensure scalable and high-availability deployments. </li>
               </ul>
             </div>
 
             {/* Work Experience 3 */}
             <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">Web Development Intern</h2>
-              <p className="text-center text-white-600">SS Technology Consultants, Reston, VA</p>
+              <h2 className="text-center text-lg font-semibold">SS Technology Consultants</h2>
+              <p className="text-center text-white-600">Web Development Intern, Reston, VA</p>
               <p className="text-center text-white-500 mt-2">May 2023 - August 2023</p>
               <br />
-              <ul className="text-white-500 list-disc">
-                <li>Led the transformation of the company website utilizing React, adhering to MVC architecture and Scrum methodology; collaborated closely with senior team members for mentorship and guidance to ensure successful project completion</li>
+              <ul className="custom-list text-white-500 list-disc">
+                <li>Led the transformation of the company website utilizing React, adhering to MVC and Scrum methodology; collaborated closely with senior team members for mentorship and guidance to ensure successful project completion</li>
+                <br />
                 <li>Learned about UI/UX design principles, responsive web design, and performance optimization techniques.</li>
               </ul>
             </div>
@@ -266,7 +277,8 @@ const Home = () => {
                 <ProjectCard
                     title="My Portfolio"
                     description={[
-                        "Made this website and chatbot."
+                        "Created this  website with a personalized AI chatbot trained on personal data, using advanced features like" +
+                        "vector embeddings, RAG, LLMs, prompt engineering, and API integration."
                     ]}
                     stack="Next.js 14, Langchain, OpenAI API, AstraDB, Tailwind CSS"
                     dateRange="Mar 2023 – Present"
@@ -284,10 +296,18 @@ const Home = () => {
                 <ProjectCard
                     title="Poker Bot"
                     description={[
-                        "Used a Monte Carlo counterfactual regret minimization algorithm to develop a 2-player Texas hold’em poker bot"
+                        "Used a Monte Carlo counterfactual regret minimization algorithm to develop a 2-player Texas hold’em poker bot."
                     ]}
                     stack="Python"
                     dateRange="June 2024 – Present"
+                />
+                <ProjectCard
+                    title="EDO.ai"
+                    description={[
+                        "Developing and researching models to predict diabetes using extensive blood test data and other methods."
+                    ]}
+                    stack="PyTorch"
+                    dateRange="August 2024 – Present"
                 />
                 
             </section>

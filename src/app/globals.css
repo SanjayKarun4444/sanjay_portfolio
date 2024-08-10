@@ -103,3 +103,34 @@
 .about-module_skillItem:hover {
   transform: scale(1.1); /* Scale up the skill item on hover */
 }
+
+
+.custom-list {
+  list-style-type: none; /* Remove default bullets */
+  
+}
+
+.custom-list li::before {
+  content: '✲';
+  font-size: 1.2em; /* Adjust the size of the smiley face */
+  margin-right: 0.2em; /* Space between the smiley and the text */
+  font-weight: 600;
+  list-style-position: outside;
+}
+
+.custom-list li {
+  font-weight: 410;
+  text-align: center;
+}
+
+.project-list{
+  list-style-type: none;
+}
+
+.project-list li::before {
+  content: '◈';
+  font-size: 1.2em; /* Adjust the size of the smiley face */
+  margin-right: 0.2em; /* Space between the smiley and the text */
+  font-weight: 600;
+  list-style-position: outside;
+}
