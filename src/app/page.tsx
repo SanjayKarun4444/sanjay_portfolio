@@ -154,7 +154,7 @@ const Home = () => {
               </ul>
             </div> */}
             {/* Work Experience 1 */}
-            <div className="shadow-md p-6 rounded-lg">
+            {/* <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">Software Engineer Intern (Contract)</h2>
               <p className="text-center text-white-600">3M</p>
               <p className="text-center text-white-500 mt-2">May 2024 – August 2024</p>
@@ -169,7 +169,7 @@ const Home = () => {
                 <br />
                 <li>Integrated kNN vectors for embedding storage with lambda functions on OpenSearch, improving relevance by up to 50%.</li>
               </ul>
-            </div>
+            </div> */}
 
             {/* <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">ML Engineer</h2>
