@@ -296,10 +296,10 @@ const Home = () => {
                 <ProjectCard
                     title="Poker Bot"
                     description={[
-                        "Used a Monte Carlo counterfactual regret minimization algorithm to develop a 2-player Texas hold’em poker bot."
+                        "Used a Monte Carlo counterfactual regret minimization algorithm to develop a strategy for a 2-player Khun's poker bot."
                     ]}
                     stack="Python"
-                    dateRange="June 2024 – Present"
+                    dateRange="June 2024 – July 2024"
                 />
                 <ProjectCard
                     title="EDO.ai"
