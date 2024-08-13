@@ -296,7 +296,7 @@ const Home = () => {
                 <ProjectCard
                     title="Poker Bot"
                     description={[
-                        "Used a Monte Carlo counterfactual regret minimization algorithm to develop a strategy for a 2-player Khun's poker bot."
+                        "Used a Monte Carlo counterfactual regret minimization algorithm to approximate a Nash Equillibrium strategy for a 2-player Khun's poker game."
                     ]}
                     stack="Python"
                     dateRange="June 2024 – July 2024"
