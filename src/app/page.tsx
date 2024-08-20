@@ -53,21 +53,22 @@ const SkillsSection = () => (
           <li className="about-module_skillItem">Python</li>
           <li className="about-module_skillItem">C</li>
           <li className="about-module_skillItem">JavaScript</li>
+          <li className="about-module_skillItem">HTML + CSS</li>
           <li className="about-module_skillItem">SQL</li>
-          <li className="about-module_skillItem">CSS</li>
-          <li className="about-module_skillItem">HTML</li>
         </ul>
       </div>
       <div className="rounded-lg shadow-md p-4">
         <h3 className="text-lg font-semibold mb-2 text-center">Technologies</h3>
-        <ul className="text-center">
-        <li className="about-module_skillItem">Spring</li>
-        <li className="about-module_skillItem">Django</li>
-        <li className="about-module_skillItem">React</li>
-        <li className="about-module_skillItem">Next.js</li>
+        <ul className="text-center columns-2">
+          <li className="about-module_skillItem">Spring</li>
+          <li className="about-module_skillItem">Django</li>
+          <li className="about-module_skillItem">React</li>
+          <li className="about-module_skillItem">OpenSearch</li>
+          <li className="about-module_skillItem">Next.js</li>
           <li className="about-module_skillItem">Node.js</li>
-          {/* <li className="about-module_skillItem">TensorFlow</li>
-          <li className="about-module_skillItem">PyTorch</li> */}
+          <li className="about-module_skillItem">Angular</li>
+          {/* <li className="about-module_skillItem">TensorFlow</li> */}
+          <li className="about-module_skillItem">PyTorch</li>
           <li className="about-module_skillItem">AWS (S3, EC2)</li>
           <li className="about-module_skillItem">MongoDB</li>
           <li className="about-module_skillItem">Express</li>
@@ -154,10 +155,10 @@ const Home = () => {
               </ul>
             </div> */}
             {/* Work Experience 1 */}
-            {/* <div className="shadow-md p-6 rounded-lg">
+            <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">Software Engineer Intern (Contract)</h2>
               <p className="text-center text-white-600">3M</p>
-              <p className="text-center text-white-500 mt-2">May 2024 – August 2024</p>
+              <p className="text-center text-white-500 mt-2">May 2024 – July 2024</p>
               <br />
               <ul className="custom-list text-white-500 list-disc"
                 >
@@ -169,7 +170,7 @@ const Home = () => {
                 <br />
                 <li>Integrated kNN vectors for embedding storage with lambda functions on OpenSearch, improving relevance by up to 50%.</li>
               </ul>
-            </div> */}
+            </div>
 
             {/* <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">ML Engineer</h2>
