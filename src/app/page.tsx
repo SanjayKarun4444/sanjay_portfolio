@@ -156,15 +156,15 @@ const Home = () => {
             </div> */}
             {/* Work Experience 1 */}
             <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">Software Engineer Intern (Contract)</h2>
-              <p className="text-center text-white-600">3M</p>
+              <h2 className="text-center text-lg font-semibold">3M</h2>
+              <p className="text-center text-white-600">Software Engineer Intern (Contract)</p>
               <p className="text-center text-white-500 mt-2">May 2024 – July 2024</p>
               <br />
               <ul className="custom-list text-white-500 list-disc"
                 >
                 <li>Crafted an efficient and robust data processing solution leveraging Spring Boot and Spring Batch, adeptly handling over 2,000,000 data points from Salesforce, utilizing Swagger for API development.</li>
                 <br />
-                <li>Developed and deployed big data pipelines with Apache Airflow and Kafka, integrating streaming data seamlessly with batch processing, resulting in a 60% increase in processing efficiency.</li>
+                <li>Developed and deployed big data pipelines using Apache Airflow and Kafka, integrating streaming data seamlessly with batch processing, resulting in a 60% increase in processing efficiency.</li>
                 <br />
                 <li>Leveraged Amazon Bedrock for Natural Language Processing (NLP), employing Titan text embeddings to enable vectorized search for RAG, fine-tuning prompts for Anthropic Claude to generate context-relevant responses.</li>
                 <br />
