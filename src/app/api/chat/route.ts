@@ -1,12 +1,15 @@
 import {ChatOpenAI} from "@langchain/openai";
 import {LangChainStream, Message as VercelChatMessage, OpenAIStream, StreamingTextResponse} from "ai"
 import {ChatCompletionMessageParam} from  "ai/prompts";
-import {ChatPromptTemplate, PromptTemplate} from "@langchain/core/prompts";
+import {ChatPromptTemplate, PromptTemplate, MessagesPlaceholder} from "@langchain/core/prompts";
 import OpenAI from "openai";
 import { getVectorStore } from "@/lib/astradb";
 import { createStuffDocumentsChain} from "langchain/chains/combine_documents";
 import { createRetrievalChain } from "langchain/chains/retrieval";
+import { createHistoryAwareRetriever } from "langchain/chains/history_aware_retriever";
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
+import { Redis } from "@upstash/redis";
+import { UpstashRedisCache } from "langchain/cache/upstash_redis"
 
 export async function POST(req: Request){
     try{
@@ -23,7 +26,10 @@ export async function POST(req: Request){
 
         const currentMessageContent = messages[messages.length - 1].content;
 
-        
+
+        const cache = new UpstashRedisCache({
+            client: Redis.fromEnv(),
+        });
 
         const {stream, handlers} = LangChainStream();
 
@@ -32,12 +38,38 @@ export async function POST(req: Request){
             streaming: true,
             callbacks: [handlers],
             verbose: true,
+            cache,
+        })
+
+        const rephrasingModel = new ChatOpenAI({
+            modelName: "gpt-3.5-turbo",
+            streaming: true,
+            cache,
+        })
+        
+        const retriever = (await getVectorStore()).asRetriever();
+
+        const rephrasePrompt = ChatPromptTemplate.fromMessages([
+            new MessagesPlaceholder("chat_history"),
+            ["user","{input}"],
+            [
+                "user",
+                "Given the above conversation, generate a search query to look up in order to get information relavent to the current question." + 
+                "Don't leave out any relavent keywords. Only return the query and no other text.",
+            ],
+        ])
+
+        const historyAwareRetrieverChain = await createHistoryAwareRetriever({
+            llm: rephrasingModel,
+            retriever,
+            rephrasePrompt,
         })
 
         const prompt = ChatPromptTemplate.fromMessages([
             [
                 "system", 
-                "You are a chatbot on a personal portfolio website. You impersonate the owner who is a college student, funny, and a little sarcastic. He is confident in his skills and very smart person." + 
+                "You are a chatbot on a personal portfolio website. You impersonate the owner who is a college student, funny, and a little sarcastic (don't mention that I am sarcastic, you should be lightly sarcastic when answering questions as a chatbot)."
+                + "He is confident in his skills and very smart person." + "The owners hobbies are listening to and making music, listening to podcasts, watching netflix, and reading books. (randomly pick a few if asked)" + 
                 "Answer the user's questions based on the below context." + 
                 "Whenever it makes sense, provide links to pages that contain pages that contain more information about the topic for the given context."+
                 "If the link has anything to do with me (skills, school, etc)send it to /about; if it has to do with my projects send to /projects"+
@@ -45,9 +77,8 @@ export async function POST(req: Request){
                 "Context: \n{context}"
                 ,
             ],
-            [
-                "user","{input}"
-            ]
+            new MessagesPlaceholder("chat_history"),
+            ["user","{input}"],
         ])
 
 
@@ -59,20 +90,20 @@ export async function POST(req: Request){
             documentPrompt: PromptTemplate.fromTemplate(
                 "Page URL: {url}\n\nPage Content\n\n{page_content}"
             ),
-            documentSeparator: "\n---------\n"
+            documentSeparator: "\n---------\n",
         })
 
-        const retriever = (await getVectorStore()).asRetriever();
 
         const retrievalChain = await createRetrievalChain({
             combineDocsChain,
-            retriever,
+            retriever: historyAwareRetrieverChain,
         });
 
 
         retrievalChain.invoke({
-            input: currentMessageContent
-        })
+            input: currentMessageContent,
+            chat_history: chatHistory,
+        });
 
 
 
@@ -80,6 +111,7 @@ export async function POST(req: Request){
 
 
     } catch (error) {
+        console.error(error);
         return Response.json({error: "Internal server error"}, {status: 500})
         // console.log(error);
         // return {

@@ -94,7 +94,7 @@ export default function AIChatBox({open, onClose} : AIChatBoxProps) {
                     </div>
                     <form onSubmit={handleSubmit} className="m-3 flex gap-1">
                         <button
-                            type="submit"
+                            type="button"
                             className="flex items-center justify-center m-10 flex-none p-0"
                             title="Clear chat"
                             onClick={()=>setMessages([])}  
@@ -112,7 +112,7 @@ export default function AIChatBox({open, onClose} : AIChatBoxProps) {
                         <button 
                             type="submit"
                             className="flex items-center justify-center m-10 flex-none disable:opacity-50 p-0"
-                            disabled={isLoading || input.length === 0}  
+                            disabled={input.length === 0} // isLoading ||   
                             title="Submit message"  
                         >
                             <SendHorizonal size = {24} />
