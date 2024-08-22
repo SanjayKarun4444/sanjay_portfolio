@@ -8,9 +8,11 @@ import { Recursive } from "next/font/google";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import { getEmbeddingsCollection, getVectorStore } from "../src/lib/astradb";
 
-
+import { Redis } from "@upstash/redis"
 
 async function generateEmbeddings() {
+
+    await Redis.fromEnv().flushdb();
 
     const vectorStore = await getVectorStore();
     
