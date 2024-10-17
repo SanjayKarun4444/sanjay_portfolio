@@ -64,7 +64,8 @@ const SkillsSection = () => (
           <li className="about-module_skillItem">Django</li>
           <li className="about-module_skillItem">React</li>
           <li className="about-module_skillItem">OpenSearch</li>
-          <li className="about-module_skillItem">Next.js</li>
+          <li className="about-module_skillItem">Solr</li>
+          {/* <li className="about-module_skillItem">Next.js</li> */}
           <li className="about-module_skillItem">Node.js</li>
           <li className="about-module_skillItem">Angular</li>
           {/* <li className="about-module_skillItem">TensorFlow</li> */}
@@ -100,7 +101,7 @@ const Home = () => {
       </section>
       <p className='space-y-3 text-center font-extralight'>
           If the ChatBot tells you something went wrong, please email me at sanjaykarun@gmail.com
-          to remind me to take AstraDB out of hibernation. Thanks.
+          to remind me to take my database (AstraDB) out of hibernation. Thanks!
         </p>
         <br></br>
       <section className="space-y-3 text-center">
@@ -123,8 +124,8 @@ const Home = () => {
                 <div className="space-y-3">
                   <H2 className="text-center">Who am I?</H2>
                   <p className="text-center">
-                    I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science and B.A in Mathematics. I am passionate about solving problems
-                    and learning different things.
+                    I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science and minor in Mathmatics, along with a M.S in Computer Science expected to be completed by 2026. 
+                    I am passionate about solving problems and learning anything cool.
                   </p>
                 </div>
               </section>
@@ -157,18 +158,18 @@ const Home = () => {
             {/* Work Experience 1 */}
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">3M</h2>
-              <p className="text-center text-white-600">Software Engineer Intern (Contract)</p>
+              <p className="text-center text-white-600">Software Engineer Intern (Contract via SS Technology)</p>
               <p className="text-center text-white-500 mt-2">May 2024 – July 2024</p>
               <br />
               <ul className="custom-list text-white-500 list-disc"
                 >
-                <li>Crafted an efficient and robust data processing solution leveraging Spring Boot and Spring Batch, adeptly handling over 2,000,000 data points from Salesforce, utilizing Swagger for API development.</li>
+                <li>Crafted an efficient and robust data processing solution leveraging Spring Boot and Spring Batch, handling over 2,000,000 search data points from Salesforce and Sharepoint, with thorough error handling and debugging.</li>
                 <br />
-                <li>Developed and deployed big data pipelines using Apache Airflow and Kafka, integrating streaming data seamlessly with batch processing, resulting in a 60% increase in processing efficiency.</li>
+                <li>Deployed and optimized scalable big data pipelines with Apache Airflow and Kafka, enabling real-time streaming data integration with batch processing, leading to a 20% improvement in processing efficiency.</li>
                 <br />
-                <li>Leveraged Amazon Bedrock for Natural Language Processing (NLP), employing Titan text embeddings to enable vectorized search for RAG, fine-tuning prompts for Anthropic Claude to generate context-relevant responses.</li>
+                <li>Utilized Amazon Bedrock for NLP, employing Titan Text Embeddings to enable vectorized search for Retrieval-Augmented Generation, leveraging Swagger for API development, testing, and debugging</li>
                 <br />
-                <li>Integrated kNN vectors for embedding storage with lambda functions on OpenSearch, improving relevance by up to 50%.</li>
+                <li>Incorporated kNN vectors for embedding storage with lambda functions on OpenSearch, fine-tuning prompts via Anthropic Claude to generate context-relevant responses improving relevance by up to 50% for consumer search.</li>
               </ul>
             </div>
 
@@ -184,8 +185,8 @@ const Home = () => {
             
             {/* Work Experience 2 */}
             <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">SS Technology Consultants</h2>
-              <p className="text-center text-white-600">Full Stack SWE Intern, Reston, VA</p>
+              <h2 className="text-center text-lg font-semibold">SS Technology</h2>
+              <p className="text-center text-white-600">Full Stack Engineer Intern, Herndon, VA</p>
               <p className="text-center text-white-500 mt-2">December 2023 – May 2024</p>
               <br />
               <ul className="custom-list text-white-500 list-disc">
@@ -201,7 +202,7 @@ const Home = () => {
 
             {/* Work Experience 3 */}
             <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">SS Technology Consultants</h2>
+              <h2 className="text-center text-lg font-semibold">SS Technology</h2>
               <p className="text-center text-white-600">Web Development Intern, Reston, VA</p>
               <p className="text-center text-white-500 mt-2">May 2023 - August 2023</p>
               <br />
@@ -209,6 +210,24 @@ const Home = () => {
                 <li>Led the transformation of the company website utilizing React, adhering to MVC and Scrum methodology; collaborated closely with senior team members for mentorship and guidance to ensure successful project completion</li>
                 <br />
                 <li>Learned about UI/UX design principles, responsive web design, and performance optimization techniques.</li>
+              </ul>
+            </div>
+
+            <div className="shadow-md p-6 rounded-lg">
+              <h2 className="text-center text-lg font-semibold">Publix Super Markets -- Publix.com</h2>
+              <p className="text-center text-white-600">Software Engineer Intern (Contract via SS Technology)</p>
+              <p className="text-center text-white-500 mt-2">May 2023 – August 2023</p>
+              <br />
+              <ul className="custom-list text-white-500 list-disc"
+                >
+                <li>Contributed to the migration of a .NET based e-commerce platform by enhancing the C# codebase for
+                search-related microservices on Azure, which supported the upgrade of search infrastructure from v8.9 to v9.2</li>
+                <br />
+                <li>Optimized and tested Solr search capabilities, including implementations of fuzzy searches, phrase/wildcard queries,
+                tokenizers, and performance/rank tuning. Developed Databricks jobs for data indexing and debugging notebook.</li>
+                <br />
+                <li>Aided with search infrastructure setup in Azure Kubernetes Services (AKS), creating stateful sets, config
+                maps, and Helm charts for Solr/ZooKeeper. Supported Azure DevOps pipelines and performance testing.</li>
               </ul>
             </div>
 
