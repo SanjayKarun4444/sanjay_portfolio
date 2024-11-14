@@ -213,23 +213,23 @@ const Home = () => {
               </ul>
             </div>
 
-            <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">Publix Super Markets -- Publix.com</h2>
-              <p className="text-center text-white-600">Software Engineer Intern (Contract via SS Technology)</p>
-              <p className="text-center text-white-500 mt-2">May 2023 – August 2023</p>
-              <br />
-              <ul className="custom-list text-white-500 list-disc"
-                >
-                <li>Contributed to the migration of a .NET based e-commerce platform by enhancing the C# codebase for
-                search-related microservices on Azure, which supported the upgrade of search infrastructure from v8.9 to v9.2</li>
-                <br />
-                <li>Optimized and tested Solr search capabilities, including implementations of fuzzy searches, phrase/wildcard queries,
-                tokenizers, and performance/rank tuning. Developed Databricks jobs for data indexing and debugging notebook.</li>
-                <br />
-                <li>Aided with search infrastructure setup in Azure Kubernetes Services (AKS), creating stateful sets, config
-                maps, and Helm charts for Solr/ZooKeeper. Supported Azure DevOps pipelines and performance testing.</li>
-              </ul>
-            </div>
+//            <div className="shadow-md p-6 rounded-lg">
+  //            <h2 className="text-center text-lg font-semibold">Publix Super Markets -- Publix.com</h2>
+    //          <p className="text-center text-white-600">Software Engineer Intern (Contract via SS Technology)</p>
+      //        <p className="text-center text-white-500 mt-2">May 2023 – August 2023</p>
+        //      <br />
+          //    <ul className="custom-list text-white-500 list-disc"
+//                >
+  //              <li>Contributed to the migration of a .NET based e-commerce platform by enhancing the C# codebase for
+    //            search-related microservices on Azure, which supported the upgrade of search infrastructure from v8.9 to v9.2</li>
+      //          <br />
+        //        <li>Optimized and tested Solr search capabilities, including implementations of fuzzy searches, phrase/wildcard queries,
+          //      tokenizers, and performance/rank tuning. Developed Databricks jobs for data indexing and debugging notebook.</li>
+//                <br />
+  //              <li>Aided with search infrastructure setup in Azure Kubernetes Services (AKS), creating stateful sets, config
+    //            maps, and Helm charts for Solr/ZooKeeper. Supported Azure DevOps pipelines and performance testing.</li>
+      //        </ul>
+        //    </div>
 
 
           </section>
