@@ -95,8 +95,8 @@ const Home = () => {
           </div>
           <br />
         
-          {/* <p className='text-center sm:text-start'> I&apos;m a 3rd year at UVA. I'm making this because I'm bored.
-            I love problem solving and learning new things, like making this website.</p> */}
+          {/* <p className='text-center sm:text-start'> I&apos;m a 3rd year at UVA. I'm making this because I'm bored, and love problem 
+                  solving and learning new things, like making this website.</p> */}
         </div>
       </section>
       <p className='space-y-3 text-center font-extralight'>
@@ -124,7 +124,7 @@ const Home = () => {
                 <div className="space-y-3">
                   <H2 className="text-center">Who am I?</H2>
                   <p className="text-center">
-                    I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science and minor in Mathmatics, along with a M.S in Computer Science expected to be completed by 2026. 
+                    I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science and Mathmatics by 2026, along with a M.S in Computer Science expected to be completed by 2027 
                     I am passionate about solving problems and learning anything cool.
                   </p>
                 </div>
