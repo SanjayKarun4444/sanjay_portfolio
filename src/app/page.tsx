@@ -186,7 +186,7 @@ const Home = () => {
             {/* Work Experience 2 */}
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">SS Technology</h2>
-              <p className="text-center text-white-600">Full Stack Engineer Intern, Herndon, VA</p>
+              <p className="text-center text-white-600">Full Stack Engineer Intern</p>
               <p className="text-center text-white-500 mt-2">December 2023 – May 2024</p>
               <br />
               <ul className="custom-list text-white-500 list-disc">
@@ -203,7 +203,7 @@ const Home = () => {
             {/* Work Experience 3 */}
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">SS Technology</h2>
-              <p className="text-center text-white-600">Web Development Intern, Reston, VA</p>
+              <p className="text-center text-white-600">Front End Engineer Intern</p>
               <p className="text-center text-white-500 mt-2">May 2023 - August 2023</p>
               <br />
               <ul className="custom-list text-white-500 list-disc">
