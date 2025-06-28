@@ -44,6 +44,45 @@ export default function Projects() {
                         <section className="grid grid-cols-2 gap-8">
                             {/* Project 1 */}
                             <ProjectCard
+                                title="SK-GPT"
+                                description={[
+                                    "Implemented ChatGPT from scratch using neural networks with custom backpropagation and gradient descent algorithms."
+                                ]}
+                                stack="TensorFlow, Python, Neural Networks"
+                                dateRange="May 2025 – Present"
+                            />
+
+                            <ProjectCard
+                                title="Siblings or Dating – Facial Recognition"
+                                description={[
+                                    "Created a Convolutional Neural Network (MobileNetV2) using transfer learning to classify preprocessed images scraped from Reddit via PRAW.",
+                                    "Achieved 80% validation accuracy distinguishing couples as either siblings or dating through hyperparameter tuning."
+                                ]}
+                                stack="TensorFlow, Keras, Python, CNN, Django"
+                                dateRange="March 2025"
+                            />
+
+
+                            <ProjectCard
+                                title="Akuna Capital Quant Trading Challenge"
+                                description={[
+                                    "Pioneered a python-based market making quantitative trading framework integrating nonlinear optimization and stochastic modeling.",
+                                    "Implemented reinforcement learning to dynamically synthesize adaptive market intelligence."
+                                ]}
+                                stack="Python, Reinforcement Learning, Nonlinear Optimization"
+                                dateRange="August 2024"
+                            />
+
+                            <ProjectCard
+                                title="Poker Bot"
+                                description={[
+                                    "Used a Monte Carlo counterfactual regret minimization algorithm to approximate a Nash Equillibrium strategy for a 2-player Khun's poker game."
+                                ]}
+                                stack="Python"
+                                dateRange="June 2024 – July 2024"
+                            />
+
+                            <ProjectCard
                                 title="TenantTalk"
                                 description={[
                                     "Built a web app for rating landlords and property management, adhering to Scrum methodology with a team of 5 other developers through sprints and weekly meetings."
@@ -51,7 +90,7 @@ export default function Projects() {
                                 stack="Django, PostgreSQL, Heroku, AWS S3"
                                 dateRange="Jan 2024 – Present"
                             />
-                            {/* Project 2 */}
+
                             <ProjectCard
                                 title="Coccidiosis Classification"
                                 description={[
@@ -60,7 +99,7 @@ export default function Projects() {
                                 stack="Python, TensorFlow, Azure"
                                 dateRange="Jan 2024 – March 2024"
                             />
-                            {/* Project 3 */}
+
                             <ProjectCard
                                 title="Film Finder"
                                 description={[
@@ -91,15 +130,29 @@ export default function Projects() {
                                 stack="Java, Spring Boot"
                                 dateRange="Nov 2023 – Dec 2023"
                             />
-
+                            
                             <ProjectCard
-                                title="My Portfolio"
+                                title="European Option Pricing"
                                 description={[
-                                    "Made this website and chatbot."
+                                    "Developed a Monte Carlo simulation-based pricing model for European vanilla options in C++" +  
+                                    "using risk-neutral pricing, Geometric Brownian Motion, and the Box-Muller algorithm, achieving" 
+                                    + "results closely matching Black-Scholes solutions."
                                 ]}
-                                stack="Next.js 14, Langchain, OpenAI API, AstraDB, Tailwind CSS"
-                                dateRange="Mar 2023 – Present"
+                                stack="C++"
+                                dateRange="May 2024 – June 2024"
                             />
+                        
+                            <ProjectCard
+                                title="EDO.ai"
+                                description={[
+                                    "Developing and researching models to predict diabetes using extensive blood test data and other methods."
+                                ]}
+                                stack="PyTorch"
+                                dateRange="August 2024 – Present"
+                            />
+
+
+                            
                         </section>
                         <br /><br />
                         {/* <div className="text-center">

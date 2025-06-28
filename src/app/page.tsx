@@ -53,27 +53,29 @@ const SkillsSection = () => (
           <li className="about-module_skillItem">Python</li>
           <li className="about-module_skillItem">C</li>
           <li className="about-module_skillItem">JavaScript</li>
+          <li className="about-module_skillItem">Typescript</li>
           <li className="about-module_skillItem">HTML + CSS</li>
           <li className="about-module_skillItem">SQL</li>
+
         </ul>
       </div>
       <div className="rounded-lg shadow-md p-4">
-        <h3 className="text-lg font-semibold mb-2 text-center">Technologies</h3>
+        <h3 className="text-lg font-semibold mb-2 text-center">Technologies/Frameworks</h3>
         <ul className="text-center columns-2">
           <li className="about-module_skillItem">Spring</li>
           <li className="about-module_skillItem">Django</li>
           <li className="about-module_skillItem">React</li>
           <li className="about-module_skillItem">OpenSearch</li>
-          <li className="about-module_skillItem">Solr</li>
-          {/* <li className="about-module_skillItem">Next.js</li> */}
+          {/* <li className="about-module_skillItem">Solr</li> */}
+          <li className="about-module_skillItem">Next.js</li>
           <li className="about-module_skillItem">Node.js</li>
-          <li className="about-module_skillItem">Angular</li>
           {/* <li className="about-module_skillItem">TensorFlow</li> */}
           <li className="about-module_skillItem">PyTorch</li>
-          <li className="about-module_skillItem">AWS (S3, EC2)</li>
           <li className="about-module_skillItem">MongoDB</li>
           <li className="about-module_skillItem">Express</li>
+          <li className="about-module_skillItem">Kafka</li>
           <li className="about-module_skillItem">Git</li>
+          <li className="about-module_skillItem">REST API</li>
         </ul>
       </div>
     </div>
@@ -95,8 +97,6 @@ const Home = () => {
           </div>
           <br />
         
-          {/* <p className='text-center sm:text-start'> I&apos;m a 3rd year at UVA. I'm making this because I'm bored.
-            I love problem solving and learning new things, like making this website.</p> */}
         </div>
       </section>
       <p className='space-y-3 text-center font-extralight'>
@@ -111,7 +111,6 @@ const Home = () => {
           the AI chat.
         </p>
         
-        {/* <H2 className='display:flex; justify-content:center; align-items:center;'>ChatBot is Work in Progress.</H2> */}
         <br />
       </section>
 
@@ -124,13 +123,13 @@ const Home = () => {
                 <div className="space-y-3">
                   <H2 className="text-center">Who am I?</H2>
                   <p className="text-center">
-                    I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science and minor in Mathmatics, along with a M.S in Computer Science expected to be completed by 2026. 
-                    I am passionate about solving problems and learning anything cool.
+                    I&apos;m a 4th year at UVA pursuing a B.S in Computer Science, B.A in Mathmatics, and Minor in Data Science expected to be completed by Spring of 2026. 
+                    I am passionate about solving problems and learning anything cool.  
                   </p>
                 </div>
               </section>
               <br /><br />
-              
+              {/* along with a M.S in Computer Science */}
               {/* Add the Skills Section */}
               <SkillsSection />
   
@@ -143,19 +142,32 @@ const Home = () => {
       {/* start here */}
       <section className="space-y-16 bg-cover bg-no-repeat px-1 py-8">
         <div className="max-w-4xl mx-auto">
-          <H1 className="text-center">Experience</H1>
+          <H1 className="text-center">Professional Experience</H1>
           <br />
           {/* Experience Section */}
           <section className="grid grid-cols-1 gap-8">
-            {/* <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">Software Engineering Intern</h2>
-              <p className="text-center text-white-600"></p>
-              <p className="text-center text-white-500 mt-2">May 2024 – Present</p>
-              <br />
-              <ul className="text-white-500 list-disc">
-              </ul>
-            </div> */}
+           
             {/* Work Experience 1 */}
+            <div className="shadow-md p-6 rounded-lg">
+              <h2 className="text-center text-lg font-semibold">GEICO</h2>
+              <p className="text-center text-white-600">Software Development Intern</p>
+              <p className="text-center text-white-500 mt-2">June 2025 – August 2025</p>
+              <br />
+              <ul className="custom-list text-white-500 list-disc"
+                >
+                <li>Created an internal Project Development Lifecycle (PDLC) management system based on Shift Left methodology for the
+Developer Engineering team leveraging Django, GraphQL, and PostgreSQL on backend with Typescript + React frontend.</li>
+                <br />
+                <li>Spearheaded an end-to-end project creating a REST API for a PDLC registry and lifecycle tracker application with respect to
+internal company procedures, benefiting thousands of engineers and accelerate product launch productivity company wide.</li>
+                <br />
+                <li>Implemented features such as LLM based risk categorization using Google Gemini API along with notifications/communication
+features using Azure DevOps, Office 365, and Slack APIs, consolidating and rebuilding the current project launch system.</li>
+          
+              </ul>
+            </div>
+
+            {/* Work Experience 2 */}
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">3M</h2>
               <p className="text-center text-white-600">Software Engineer Intern (Contract via SS Technology)</p>
@@ -163,73 +175,41 @@ const Home = () => {
               <br />
               <ul className="custom-list text-white-500 list-disc"
                 >
-                <li>Crafted an efficient and robust data processing solution leveraging Spring Boot and Spring Batch, handling over 2,000,000 search data points from Salesforce and Sharepoint, with thorough error handling and debugging.</li>
+                <li>Crafted an efficient data processing solution leveraging Spring Boot and Spring Batch, handling over 2,000,000+ search data
+points belonging to 3M from Salesforce and Sharepoint, with thorough error handling.</li>
                 <br />
-                <li>Deployed and optimized scalable big data pipelines with Apache Airflow and Kafka, enabling real-time streaming data integration with batch processing, leading to a 20% improvement in processing efficiency.</li>
+                <li>Optimized and utilized scalable big data pipelines with Apache Airflow and Kafka, enabling real-time streaming data integration
+with batch processing, leading to a 6% improvement in processing efficiency for semantic search, based on time and CPU usage.</li>
                 <br />
-                <li>Utilized Amazon Bedrock for NLP, employing Titan Text Embeddings to enable vectorized search for Retrieval-Augmented Generation, leveraging Swagger for API development, testing, and debugging</li>
+                <li>Utilized Amazon Bedrock for Natural Language Processing (NLP), employing Titan Text Embeddings to transform words into
+high dimensional vectors, enabling vectorized search for Retrieval-Augmented Generation (RAG). </li>
                 <br />
-                <li>Incorporated kNN vectors for embedding storage with lambda functions on OpenSearch, fine-tuning prompts via Anthropic Claude to generate context-relevant responses improving relevance by up to 50% for consumer search.</li>
+                <li>Incorporated kNN vectors (k=5) for embedding storage with lambda functions on OpenSearch, prompt engineering Anthropic
+Claude API to generate context-relevant responses; leveraging Swagger for API development. </li>
               </ul>
             </div>
 
-            {/* <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">ML Engineer</h2>
-              <p className="text-center text-white-600">HBDO, Washington, D.C</p>
-              <p className="text-center text-white-500 mt-2">February 2024 – March 2024</p>
-              <br />
-              <ul className="text-white-500 list-disc">
-                <li>Head of the development of a cutting-edge Scalar Vector Machine (SVM) model to classify and detect potential cases of diabetes using extensive blood test data from a cohort of 700+ individuals.</li>
-              </ul>
-            </div>  */}
             
-            {/* Work Experience 2 */}
+            
+            {/* Work Experience 3 */}
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">SS Technology</h2>
               <p className="text-center text-white-600">Full Stack Engineer Intern, Herndon, VA</p>
               <p className="text-center text-white-500 mt-2">December 2023 – May 2024</p>
               <br />
               <ul className="custom-list text-white-500 list-disc">
-                <li>Tech Lead for a group of interns, leading weekly meetings, ensuring alignment with sprint goals while facilitating seamless communication.</li>
+                <li>Directed a team of interns to develop a REST API, organizing weekly meetings and using Atlassian Jira for agile sprint management, 
+                  achieving a 20% improvement in project timelines and enhancing team collaboration.</li>
                 <br />
-                <li>Designed and implemented a secure back-end Authentication System with the MERN stack (MongoDB, Express, React, NodeJS). Exercising JWT and Bcrypt to increase overall security by over 60% based on pen-testing results.</li>
+                <li>Designed and implemented a secure back-end authentication system using React, Express, Node.js, and MongoDB, utilizing JWT
+and Bcrypt to enhance security by eliminating all major authentication vulnerabilities by replacing a SHA-256 hash</li>
                 <br />
-                <li>Employed RESTful API endpoints for Registration, Login, and Sign-out functionalities, and Postman for development and testing.</li>
-                <br />
-                <li>Configured and managed EC2 instances to ensure scalable and high-availability deployments. </li>
+                <li>Configured AWS EC2 instances, S3 buckets for media storage; assisted with Docker containerization and Kubernetes orchestration via YAML; 
+                  implemented unit testing via GitHub Actions for an internal employee community forum.</li>
               </ul>
             </div>
 
-            {/* Work Experience 3 */}
-            <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">SS Technology</h2>
-              <p className="text-center text-white-600">Web Development Intern, Reston, VA</p>
-              <p className="text-center text-white-500 mt-2">May 2023 - August 2023</p>
-              <br />
-              <ul className="custom-list text-white-500 list-disc">
-                <li>Led the transformation of the company website utilizing React, adhering to MVC and Scrum methodology; collaborated closely with senior team members for mentorship and guidance to ensure successful project completion</li>
-                <br />
-                <li>Learned about UI/UX design principles, responsive web design, and performance optimization techniques.</li>
-              </ul>
-            </div>
-
-            <div className="shadow-md p-6 rounded-lg">
-              <h2 className="text-center text-lg font-semibold">Publix Super Markets -- Publix.com</h2>
-              <p className="text-center text-white-600">Software Engineer Intern (Contract via SS Technology)</p>
-              <p className="text-center text-white-500 mt-2">May 2023 – August 2023</p>
-              <br />
-              <ul className="custom-list text-white-500 list-disc"
-                >
-                <li>Contributed to the migration of a .NET based e-commerce platform by enhancing the C# codebase for
-                search-related microservices on Azure, which supported the upgrade of search infrastructure from v8.9 to v9.2</li>
-                <br />
-                <li>Optimized and tested Solr search capabilities, including implementations of fuzzy searches, phrase/wildcard queries,
-                tokenizers, and performance/rank tuning. Developed Databricks jobs for data indexing and debugging notebook.</li>
-                <br />
-                <li>Aided with search infrastructure setup in Azure Kubernetes Services (AKS), creating stateful sets, config
-                maps, and Helm charts for Solr/ZooKeeper. Supported Azure DevOps pipelines and performance testing.</li>
-              </ul>
-            </div>
+         
 
 
           </section>
@@ -241,11 +221,50 @@ const Home = () => {
       {/* Projects start here */}
       <section className="space-y-16 bg-cover bg-no-repeat px-1 py-8">
           <div className="max-w-4xl mx-auto">
-            <H1 className="text-center">My Projects</H1>
+            <H1 className="text-center">My Projects and Activities</H1>
             <br />
             {/* Rendering Project Cards */}
             <section className="grid grid-cols-2 gap-8">
-                {/* Project 1 */}
+
+                <ProjectCard
+                    title="SK-GPT"
+                    description={[
+                        "Implemented ChatGPT from scratch using neural networks with custom backpropagation and gradient descent algorithms."
+                    ]}
+                    stack="TensorFlow, Python, Neural Networks"
+                    dateRange="May 2025 – Present"
+                />
+
+                <ProjectCard
+                    title="Siblings or Dating – Facial Recognition"
+                    description={[
+                        "Created a Convolutional Neural Network (MobileNetV2) using transfer learning to classify preprocessed images scraped from Reddit via PRAW.",
+                        "Achieved 80% validation accuracy distinguishing couples as either siblings or dating through hyperparameter tuning."
+                    ]}
+                    stack="TensorFlow, Keras, Python, CNN, Django"
+                    dateRange="March 2025"
+                />
+
+
+                <ProjectCard
+                    title="Akuna Capital Quant Trading Challenge"
+                    description={[
+                        "Pioneered a python-based market making quantitative trading framework integrating nonlinear optimization and stochastic modeling.",
+                        "Implemented reinforcement learning to dynamically synthesize adaptive market intelligence."
+                    ]}
+                    stack="Python, Reinforcement Learning, Nonlinear Optimization"
+                    dateRange="August 2024"
+                />
+
+                <ProjectCard
+                    title="Poker Bot"
+                    description={[
+                        "Used a Monte Carlo counterfactual regret minimization algorithm to approximate a Nash Equillibrium strategy for a 2-player Khun's poker game."
+                    ]}
+                    stack="Python"
+                    dateRange="June 2024 – July 2024"
+                />
+
                 <ProjectCard
                     title="TenantTalk"
                     description={[
@@ -254,7 +273,7 @@ const Home = () => {
                     stack="Django, PostgreSQL, Heroku, AWS S3"
                     dateRange="Jan 2024 – Present"
                 />
-                {/* Project 2 */}
+
                 <ProjectCard
                     title="Coccidiosis Classification"
                     description={[
@@ -263,7 +282,7 @@ const Home = () => {
                     stack="Python, TensorFlow, Azure"
                     dateRange="Jan 2024 – March 2024"
                 />
-                {/* Project 3 */}
+
                 <ProjectCard
                     title="Film Finder"
                     description={[
@@ -294,15 +313,7 @@ const Home = () => {
                     stack="Java, Spring Boot"
                     dateRange="Nov 2023 – Dec 2023"
                 />
-                <ProjectCard
-                    title="My Portfolio"
-                    description={[
-                        "Created this  website with a personalized AI chatbot trained on personal data, using advanced features like" +
-                        "vector embeddings, RAG, LLMs, prompt engineering, and API integration."
-                    ]}
-                    stack="Next.js 14, Langchain, OpenAI API, AstraDB, Tailwind CSS"
-                    dateRange="Mar 2023 – Present"
-                />
+                
                 <ProjectCard
                     title="European Option Pricing"
                     description={[
@@ -313,14 +324,7 @@ const Home = () => {
                     stack="C++"
                     dateRange="May 2024 – June 2024"
                 />
-                <ProjectCard
-                    title="Poker Bot"
-                    description={[
-                        "Used a Monte Carlo counterfactual regret minimization algorithm to approximate a Nash Equillibrium strategy for a 2-player Khun's poker game."
-                    ]}
-                    stack="Python"
-                    dateRange="June 2024 – July 2024"
-                />
+               
                 <ProjectCard
                     title="EDO.ai"
                     description={[

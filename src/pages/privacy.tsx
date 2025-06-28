@@ -11,7 +11,7 @@ export default function privacy(){
     return (
         <ThemeProvider attribute="class">
 
-            <H1 className="text-center">I don&apos;t take data from you.</H1>
+            <H1 className="text-center">I don&apos;t take data from you. Even if I did, what would I do with that ;)</H1>
             <div className="text-center">
                 <Link href="/">Go back to Home</Link>
             </div>

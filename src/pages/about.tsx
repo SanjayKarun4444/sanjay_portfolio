@@ -22,30 +22,32 @@ const SkillsSection = () => (
         <div className="rounded-lg shadow-md p-4">
           <h3 className="text-lg font-semibold mb-2 text-center">Languages</h3>
           <ul className="text-center">
-            <li className="about-module_skillItem">Java</li>
-            <li className="about-module_skillItem">Python</li>
-            <li className="about-module_skillItem">C</li>
-            <li className="about-module_skillItem">JavaScript</li>
-            <li className="about-module_skillItem">SQL</li>
-            <li className="about-module_skillItem">CSS</li>
-            <li className="about-module_skillItem">HTML</li>
+              <li className="about-module_skillItem">Java</li>
+              <li className="about-module_skillItem">Python</li>
+              <li className="about-module_skillItem">C</li>
+              <li className="about-module_skillItem">JavaScript</li>
+              <li className="about-module_skillItem">Typescript</li>
+              <li className="about-module_skillItem">HTML + CSS</li>
+              <li className="about-module_skillItem">SQL</li>
           </ul>
         </div>
         <div className="rounded-lg shadow-md p-4">
           <h3 className="text-lg font-semibold mb-2 text-center">Technologies</h3>
-          <ul className="text-center">
+          <ul className="text-center columns-2">
             <li className="about-module_skillItem">Spring</li>
             <li className="about-module_skillItem">Django</li>
             <li className="about-module_skillItem">React</li>
+            <li className="about-module_skillItem">OpenSearch</li>
+            {/* <li className="about-module_skillItem">Solr</li> */}
             <li className="about-module_skillItem">Next.js</li>
             <li className="about-module_skillItem">Node.js</li>
-            <li className="about-module_skillItem">Elastic & OpenSearch</li>
-            {/* <li className="about-module_skillItem">TensorFlow</li>
-            <li className="about-module_skillItem">PyTorch</li> */}
-            <li className="about-module_skillItem">AWS (S3, EC2)</li>
+            {/* <li className="about-module_skillItem">TensorFlow</li> */}
+            <li className="about-module_skillItem">PyTorch</li>
             <li className="about-module_skillItem">MongoDB</li>
             <li className="about-module_skillItem">Express</li>
+            <li className="about-module_skillItem">Kafka</li>
             <li className="about-module_skillItem">Git</li>
+            <li className="about-module_skillItem">REST API</li>
           </ul>
         </div>
       </div>

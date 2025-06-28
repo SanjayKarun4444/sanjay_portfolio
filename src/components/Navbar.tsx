@@ -7,7 +7,8 @@ export default function navbar(){
             <nav className="space-x-4 font-medium">
                 <Link href="/">Home</Link>
                 <Link href="/about">About Me</Link>
-                <Link href="/projects">My Projects</Link>
+                <Link href="/projects">My Projects</Link> 
+                <Link href="/spotify">My Spotify :)</Link>
             </nav>
 
             <div className="flex items-center gap-4">
