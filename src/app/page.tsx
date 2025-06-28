@@ -97,6 +97,8 @@ const Home = () => {
           </div>
           <br />
         
+          {/* <p className='text-center sm:text-start'> I&apos;m a 3rd year at UVA. I'm making this because I'm bored, and love problem 
+                  solving and learning new things, like making this website.</p> */}
         </div>
       </section>
       <p className='space-y-3 text-center font-extralight'>
@@ -194,7 +196,7 @@ Claude API to generate context-relevant responses; leveraging Swagger for API de
             {/* Work Experience 3 */}
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">SS Technology</h2>
-              <p className="text-center text-white-600">Full Stack Engineer Intern, Herndon, VA</p>
+              <p className="text-center text-white-600">Full Stack Engineer Intern</p>
               <p className="text-center text-white-500 mt-2">December 2023 – May 2024</p>
               <br />
               <ul className="custom-list text-white-500 list-disc">
