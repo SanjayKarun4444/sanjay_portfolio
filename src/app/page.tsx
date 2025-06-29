@@ -10,7 +10,7 @@ import { Bot } from "lucide-react";
 // Declare the metadata
 export const metadata: Metadata = {
   title: "Sanjay Karunamoorthy | My Portfolio",
-  description: "Sanjay is a 3rd year Student at the University of Virginia.",
+  description: "Sanjay is a 4th year at UVA, passionate about solving problems and learning anything cool",
 }
 
 interface ProjectCardProps {
