@@ -67,7 +67,7 @@ export default function Projects() {
                                 title="Akuna Capital Quant Trading Challenge"
                                 description={[
                                     "Pioneered a python-based market making quantitative trading framework integrating nonlinear optimization and stochastic modeling.",
-                                    "Implemented reinforcement learning to dynamically synthesize adaptive market intelligence."
+                                    "Implemented reinforcement learning to dynamically synthesize adaptive market intelligence. "
                                 ]}
                                 stack="Python, Reinforcement Learning, Nonlinear Optimization"
                                 dateRange="August 2024"
