@@ -172,7 +172,7 @@ features using Azure DevOps, Office 365, and Slack APIs, consolidating and rebui
             {/* Work Experience 2 */}
             <div className="shadow-md p-6 rounded-lg">
               <h2 className="text-center text-lg font-semibold">3M</h2>
-              <p className="text-center text-white-600">Software Engineer Intern (Contract via SS Technology)</p>
+              <p className="text-center text-white-600">Software Engineer Intern (Contract)</p>
               <p className="text-center text-white-500 mt-2">May 2024 – July 2024</p>
               <br />
               <ul className="custom-list text-white-500 list-disc"
