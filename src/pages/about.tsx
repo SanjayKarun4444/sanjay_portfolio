@@ -70,7 +70,7 @@ export default function About() {
               <div className="space-y-3">
                 <H2 className="text-center">Who am I?</H2>
                 <p className="text-center">
-                  I&apos;m a 3rd year at UVA pursuing a B.S in Computer Science and B.A in Mathematics. I am passionate about solving problems
+                  I&apos;m a 4th year at UVA pursuing a B.S in Computer Science and B.A in Mathematics. I am passionate about solving problems
                   and learning different things.
                 </p>
               </div>
