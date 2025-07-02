@@ -1,0 +1,136 @@
+{
+  "about": {
+    "bio": "4th year at UVA pursuing a B.S in Computer Science, B.A in Mathematics, and Minor in Data Science expected by Spring 2026. Passionate about solving problems and learning anything cool.",
+    "skills": {
+      "languages": ["Java", "Python", "C", "JavaScript", "Typescript", "HTML + CSS", "SQL"],
+      "frameworks": ["Spring", "Django", "React", "OpenSearch", "Next.js", "Node.js", "PyTorch", "MongoDB", "Express", "Kafka", "Git", "REST API"]
+    }
+  },
+  "projects": [
+    {
+      "name": "SK-GPT",
+      "description": [
+        "Implemented ChatGPT from scratch using neural networks with custom backpropagation and gradient descent algorithms."
+      ],
+      "stack": "TensorFlow, Python, Neural Networks",
+      "date": "May 2025 – Present"
+    },
+    {
+      "name": "Siblings or Dating – Facial Recognition",
+      "description": [
+        "Created MobileNetV2 CNN with transfer learning, classifying Reddit images using PRAW.",
+        "Achieved 80% validation accuracy with hyperparameter tuning."
+      ],
+      "stack": "TensorFlow, Keras, Python, CNN, Django",
+      "date": "March 2025"
+    },
+    {
+      "name": "Akuna Capital Quant Trading Challenge",
+      "description": [
+        "Built Python-based market making framework using nonlinear optimization and stochastic modeling.",
+        "Integrated reinforcement learning for adaptive strategy."
+      ],
+      "stack": "Python, Reinforcement Learning, Nonlinear Optimization",
+      "date": "August 2024"
+    },
+    {
+      "name": "Poker Bot",
+      "description": [
+        "Applied Monte Carlo counterfactual regret minimization to solve 2-player Kuhn Poker."
+      ],
+      "stack": "Python",
+      "date": "June 2024 – July 2024"
+    },
+    {
+      "name": "TenantTalk",
+      "description": [
+        "Web app for rating landlords; followed Scrum with weekly meetings and sprint planning."
+      ],
+      "stack": "Django, PostgreSQL, Heroku, AWS S3",
+      "date": "Jan 2024 – Present"
+    },
+    {
+      "name": "Coccidiosis Classification",
+      "description": [
+        "CNN to classify chicken images and detect Coccidiosis using 1000+ labeled images."
+      ],
+      "stack": "Python, TensorFlow, Azure",
+      "date": "Jan 2024 – March 2024"
+    },
+    {
+      "name": "Film Finder",
+      "description": [
+        "Used Python with NumPy, scikit-learn, Pickle, and TMDB API to recommend films."
+      ],
+      "stack": "Python, TensorFlow",
+      "date": "Sept 2023 – Dec 2023"
+    },
+    {
+      "name": "EzCite",
+      "description": [
+        "Built React + Next.js site; used Perplexity LLM and Node.js (discord.js, Puppeteer).",
+        "Citations generated using citation-machine."
+      ],
+      "stack": "React, Next.js, Node.js, JavaScript, HTML, CSS",
+      "date": "Mar 2024 – Mar 2024"
+    },
+    {
+      "name": "Natural Language Processing Application",
+      "description": [
+        "NER app to extract names, cities, states, countries using Stanford CoreNLP."
+      ],
+      "stack": "Java, Spring Boot",
+      "date": "Nov 2023 – Dec 2023"
+    },
+    {
+      "name": "European Option Pricing",
+      "description": [
+        "Monte Carlo model for pricing vanilla options in C++ using GBM and Box-Muller algorithm.",
+        "Compared results with Black-Scholes model."
+      ],
+      "stack": "C++",
+      "date": "May 2024 – June 2024"
+    },
+    {
+      "name": "EDO.ai",
+      "description": [
+        "Researching models to predict diabetes based on blood test data."
+      ],
+      "stack": "PyTorch",
+      "date": "August 2024 – Present"
+    }
+  ],
+  "experience": [
+    {
+      "company": "GEICO",
+      "role": "Software Development Intern",
+      "date": "June 2025 – August 2025",
+      "details": [
+        "Created an internal PDLC system using Django, GraphQL, PostgreSQL, Typescript, React.",
+        "Built a REST API for PDLC registry/lifecycle tracking, benefiting thousands of engineers.",
+        "Implemented LLM-based risk categorization using Google Gemini API and notifications using Azure DevOps, Office 365, and Slack APIs."
+      ]
+    },
+    {
+      "company": "3M",
+      "role": "Software Engineer Intern (Contract)",
+      "date": "May 2024 – July 2024",
+      "details": [
+        "Built a Spring Boot/Batch solution processing 2M+ data points from Salesforce/SharePoint.",
+        "Used Apache Airflow and Kafka for streaming batch pipelines, improving efficiency by 6%.",
+        "Leveraged Amazon Bedrock + Titan Text Embeddings for RAG-based semantic search.",
+        "Integrated kNN vectors with OpenSearch and prompt engineering with Claude API."
+      ]
+    },
+    {
+      "company": "SS Technology",
+      "role": "Full Stack Engineer Intern",
+      "date": "December 2023 – May 2024",
+      "details": [
+        "Led interns to develop a REST API; used Jira for sprints; improved project timelines by 20%.",
+        "Built secure auth using MERN stack with JWT and Bcrypt (replacing SHA-256).",
+        "Configured AWS EC2, S3; containerized with Docker, orchestrated with Kubernetes; tested via GitHub Actions."
+      ]
+    }
+  ]
+}

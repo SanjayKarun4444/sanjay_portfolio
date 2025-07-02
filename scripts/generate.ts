@@ -44,9 +44,12 @@ async function generateEmbeddings() {
             metadata: { url }
         };
     });
+
+    const docs2 = (await loader.load())
+    .filter(doc => doc.metadata.source.endsWith("content.json"))
     const splitter = RecursiveCharacterTextSplitter.fromLanguage("html");
 
-    const splitDocs = await splitter.splitDocuments(docs)
+    const splitDocs = await splitter.splitDocuments(docs2)
 
     await vectorStore.addDocuments(splitDocs);
 
