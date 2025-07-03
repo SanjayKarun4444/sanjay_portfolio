@@ -160,8 +160,8 @@ const Home = () => {
                 <li>Created an internal Project Development Lifecycle (PDLC) management system based on Shift Left methodology for the
 Developer Engineering team leveraging Django, GraphQL, and PostgreSQL on backend with Typescript + React frontend.</li>
                 <br />
-                <li>Spearheaded an end-to-end project creating a REST API for a PDLC registry and lifecycle tracker application with respect to
-internal company procedures, benefiting thousands of engineers and accelerate product launch productivity company wide.</li>
+                <li>Spearheaded an end-to-end project with an intern team creating a REST API for a PDLC lifecycle tracker system with respect to
+internal company procedures, expect to benefit 3500+ of engineers and managers and accelerate product launch productivity.</li>
                 <br />
                 <li>Implemented features such as LLM based risk categorization using Google Gemini API along with notifications/communication
 features using Azure DevOps, Office 365, and Slack APIs, consolidating and rebuilding the current project launch system.</li>
