@@ -13,7 +13,15 @@
         "Implemented ChatGPT from scratch using neural networks with custom backpropagation and gradient descent algorithms."
       ],
       "stack": "TensorFlow, Python, Neural Networks",
-      "date": "May 2025 – Present"
+      "date": "July 2025 – Present"
+    },
+    {
+      "name": "Micrograd",
+      "description": [
+        "Implementing backpropagation over a dynamically built DAG. Creating a neural network from scratch."
+      ],
+      "stack": "TensorFlow, Python, Neural Networks, Backpropagation, Gradient Descent",
+      "date": "July 2025 – Present"
     },
     {
       "name": "Siblings or Dating – Facial Recognition",

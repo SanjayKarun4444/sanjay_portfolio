@@ -227,14 +227,21 @@ and Bcrypt to enhance security by eliminating all major authentication vulnerabi
             <br />
             {/* Rendering Project Cards */}
             <section className="grid grid-cols-2 gap-8">
-
+                <ProjectCard
+                    title="Micrograd"
+                    description={[
+                        "Implementing backpropagation over a dynamically built DAG. Creating a neural network from scratch."
+                    ]}
+                    stack="TensorFlow, Python, Neural Networks, Backpropagation, Gradient Descent"
+                    dateRange="July 2025 – Present"
+                />
                 <ProjectCard
                     title="SK-GPT"
                     description={[
                         "Implemented ChatGPT from scratch using neural networks with custom backpropagation and gradient descent algorithms."
                     ]}
                     stack="TensorFlow, Python, Neural Networks"
-                    dateRange="May 2025 – Present"
+                    dateRange="July 2025 – Present"
                 />
 
                 <ProjectCard
