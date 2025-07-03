@@ -161,7 +161,7 @@ const Home = () => {
 Developer Engineering team leveraging Django, GraphQL, and PostgreSQL on backend with Typescript + React frontend.</li>
                 <br />
                 <li>Spearheaded an end-to-end project with an intern team creating a REST API for a PDLC lifecycle tracker system with respect to
-internal company procedures, expect to benefit 3500+ of engineers and managers and accelerate product launch productivity.</li>
+internal company procedures, expected to benefit 3500+ of engineers and managers and accelerate product launch productivity.</li>
                 <br />
                 <li>Implemented features such as LLM based risk categorization using Google Gemini API along with notifications/communication
 features using Azure DevOps, Office 365, and Slack APIs, consolidating and rebuilding the current project launch system.</li>
