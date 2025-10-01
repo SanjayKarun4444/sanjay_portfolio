@@ -246,7 +246,7 @@ Claude API to generate context-relevant responses; leveraging Swagger for API de
                         "Implementing backpropagation over a dynamically built DAG. Creating a neural network from scratch."
                     ]}
                     stack="TensorFlow, Python, Neural Networks, Backpropagation, Gradient Descent"
-                    dateRange="July 2025 – Present"
+                    dateRange="August 2025 – Present"
                 />
                 <ProjectCard
                     title="SK-GPT"
@@ -254,7 +254,7 @@ Claude API to generate context-relevant responses; leveraging Swagger for API de
                         "Implemented ChatGPT from scratch using neural networks with custom backpropagation and gradient descent algorithms."
                     ]}
                     stack="TensorFlow, Python, Neural Networks"
-                    dateRange="July 2025 – Present"
+                    dateRange="August 2025 – Present"
                 />
 
                 <ProjectCard
