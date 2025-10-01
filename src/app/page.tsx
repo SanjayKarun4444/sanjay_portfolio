@@ -148,6 +148,18 @@ const Home = () => {
           <br />
           {/* Experience Section */}
           <section className="grid grid-cols-1 gap-8">
+
+            {/* Research */}
+            <div className="shadow-md p-6 rounded-lg">
+              <h2 className="text-center text-lg font-semibold">University of Virginia</h2>
+              <p className="text-center text-white-600">Undergraduate Artificial Intelligence Researcher</p>
+              <p className="text-center text-white-500 mt-2">August 2025 – Present</p>
+              <br />
+              <ul className="custom-list text-white-500 list-disc">
+                <li>Training Reinforcement Learning Agents to collaborate with humans to improve task performance with Proximal Priority Optimization. 
+                  Conducting experiments with multi-agent settings to analyze cooperation, incentives, and emergent behaviors.</li>
+              </ul>
+            </div>
            
             {/* Work Experience 1 */}
             <div className="shadow-md p-6 rounded-lg">
@@ -157,14 +169,16 @@ const Home = () => {
               <br />
               <ul className="custom-list text-white-500 list-disc"
                 >
-                <li>Created an internal Project Development Lifecycle (PDLC) management system based on Shift Left methodology for the
-Developer Engineering team leveraging Django, GraphQL, and PostgreSQL on backend with Typescript + React frontend.</li>
+                <li>Pioneered an MVP dashboard for a Project Development Life Cycle management system based on Shift Left methodology; 
+                  created a REST API leveraging Django, PostgreSQL, TypeScript, and React; scoped to benefit 3000+ engineers.</li>
                 <br />
-                <li>Spearheaded an end-to-end project with an intern team creating a REST API for a PDLC lifecycle tracker system with respect to
-internal company procedures, expected to benefit 3500+ of engineers and managers and accelerate product launch productivity.</li>
+                <li>Partnered with 15+ Senior Directors, VPs, PMs, Engineers and SMEs in a cross-functional team to design a product 
+                  workflow optimization system with JSON integration, Redis caching, GraphQL querying, and Azure DevOps/Slack automation.</li>
                 <br />
-                <li>Implemented features such as LLM based risk categorization using Google Gemini API along with notifications/communication
-features using Azure DevOps, Office 365, and Slack APIs, consolidating and rebuilding the current project launch system.</li>
+                <li>Implemented efficient GET/POST requests for bidirectional synchronization and timed system reloads to prevent 
+                  race conditions.</li>
+                <li>Engineered an email automation script by pre-processing 17,000+ repositories to reach out to 2000+ system owners; 
+                  utilized Power BI and Excel for data input organization and communication for stakeholders, using pandas for email sending automation.</li>
           
               </ul>
             </div>
@@ -200,14 +214,13 @@ Claude API to generate context-relevant responses; leveraging Swagger for API de
               <p className="text-center text-white-500 mt-2">December 2023 – May 2024</p>
               <br />
               <ul className="custom-list text-white-500 list-disc">
-                <li>Directed a team of interns to develop a REST API, organizing weekly meetings and using Atlassian Jira for agile sprint management, 
-                  achieving a 20% improvement in project timelines and enhancing team collaboration.</li>
+                <li>Directed a group of interns to develop a REST API, organized meetings via JIRA for agile sprint management. 
+                  Worked on CI/CD pipelines for an employee management app using Docker, Kubernetes, Jenkins + Bitbucket, reducing deployment times by 30%.</li>
                 <br />
-                <li>Designed and implemented a secure back-end authentication system using React, Express, Node.js, and MongoDB, utilizing JWT
-and Bcrypt to enhance security by eliminating all major authentication vulnerabilities by replacing a SHA-256 hash</li>
+                <li>Designed and created a secure back-end authentication system using React, Express, Node.js, and MongoDB, utilizing JWT and Bcrypt to 
+                  enhance security by eliminating all major authentication vulnerabilities by replacing an insecure SHA-256 hash.</li>
                 <br />
-                <li>Configured AWS EC2 instances, S3 buckets for media storage; assisted with Docker containerization and Kubernetes orchestration via YAML; 
-                  implemented unit testing via GitHub Actions for an internal employee community forum.</li>
+                <li>Automated monitoring tasks through Linux/Unix environments with Bash scripting to reduce manual setup time.</li>
               </ul>
             </div>
 
