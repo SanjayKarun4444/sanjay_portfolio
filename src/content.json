@@ -1,6 +1,6 @@
 {
   "about": {
-    "bio": "4th year at UVA pursuing a B.S in Computer Science, B.A in Mathematics, and Minor in Data Science expected by Spring 2026. Passionate about solving problems and learning anything cool.",
+    "bio": "4th year at UVA pursuing a B.S in Computer Science and Minor in Data Science expected by Spring 2026. Passionate about solving problems and learning anything cool.",
     "skills": {
       "languages": ["Java", "Python", "C", "JavaScript", "Typescript", "HTML + CSS", "SQL"],
       "frameworks": ["Spring", "Django", "React", "OpenSearch", "Next.js", "Node.js", "PyTorch", "MongoDB", "Express", "Kafka", "Git", "REST API"]

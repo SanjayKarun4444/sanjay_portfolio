@@ -125,7 +125,7 @@ const Home = () => {
                 <div className="space-y-3">
                   <H2 className="text-center">Who am I?</H2>
                   <p className="text-center">
-                    I&apos;m a 4th year at UVA pursuing a B.S in Computer Science, B.A in Mathmatics, and Minor in Data Science expected to be completed by Spring of 2026. 
+                    I&apos;m a 4th year at UVA pursuing a B.S in Computer Science and Minor in Data Science expected to be completed by Spring of 2026. 
                     I am passionate about solving problems and learning anything cool.  
                   </p>
                 </div>
