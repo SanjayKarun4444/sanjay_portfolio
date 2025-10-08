@@ -114,9 +114,10 @@
       "role": "Software Development Intern",
       "date": "June 2025 – August 2025",
       "details": [
-        "Created an internal PDLC system using Django, GraphQL, PostgreSQL, Typescript, React.",
-        "Built a REST API for PDLC registry/lifecycle tracking, benefiting thousands of engineers.",
-        "Implemented LLM-based risk categorization using Google Gemini API and notifications using Azure DevOps, Office 365, and Slack APIs."
+        "Pioneered an MVP dashboard for a Project Development Life Cycle management system based on Shift Left methodology; created a REST API leveraging Django, PostgreSQL, TypeScript, and React; scoped to benefit 3000+ engineers.",
+        "Partnered with 15+ Senior Directors, VPs, PMs, Engineers and SMEs in a cross-functional team to design a product workflow optimization system with JSON integration, Redis caching, GraphQL querying, and Azure DevOps/Slack automation.",
+        "Implemented efficient GET/POST requests for bidirectional synchronization and timed system reloads to prevent race conditions.",
+        "Engineered an email automation script by pre-processing 17,000+ repositories to reach out to 2000+ system owners; utilized Power BI and Excel for data input organization and communication for stakeholders, using pandas for email sending automation."
       ]
     },
     {
