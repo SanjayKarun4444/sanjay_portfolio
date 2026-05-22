@@ -1,139 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ── Design tokens ──────────────────────────────── */
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  --bg-base:        #080b12;
+  --bg-surface:     #0f1420;
+  --bg-card:        #131926;
+  --bg-card-hover:  #181f2e;
+  --border-subtle:  rgba(255,255,255,0.07);
+  --border-mid:     rgba(255,255,255,0.12);
 
+  --accent-1: #6c63ff;
+  --accent-2: #a78bfa;
+  --accent-3: #38bdf8;
+  --accent-warm: #fb923c;
 
-/* can change this theme go to ui.shadecn --> themes and copy code for wanted color*/
+  --grad-primary: linear-gradient(135deg, #6c63ff 0%, #a78bfa 50%, #38bdf8 100%);
+  --grad-text:    linear-gradient(135deg, #a78bfa 0%, #38bdf8 100%);
+  --grad-warm:    linear-gradient(135deg, #fb923c 0%, #f43f5e 100%);
 
+  --text-primary:   #f0f4ff;
+  --text-secondary: #8b95b0;
+  --text-muted:     #4a5168;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 20 14.3% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
-    --primary: 47.9 95.8% 53.1%;
-    --primary-foreground: 26 83.3% 14.1%;
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
-    --muted: 60 4.8% 95.9%;
-    --muted-foreground: 25 5.3% 44.7%;
-    --accent: 60 4.8% 95.9%;
-    --accent-foreground: 24 9.8% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 20 14.3% 4.1%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 60 9.1% 97.8%;
-    --card: 20 14.3% 4.1%;
-    --card-foreground: 60 9.1% 97.8%;
-    --popover: 20 14.3% 4.1%;
-    --popover-foreground: 60 9.1% 97.8%;
-    --primary: 47.9 95.8% 53.1%;
-    --primary-foreground: 26 83.3% 14.1%;
-    --secondary: 12 6.5% 15.1%;
-    --secondary-foreground: 60 9.1% 97.8%;
-    --muted: 12 6.5% 15.1%;
-    --muted-foreground: 24 5.4% 63.9%;
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 60 9.1% 97.8%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 12 6.5% 15.1%;
-    --input: 12 6.5% 15.1%;
-    --ring: 35.5 91.7% 32.9%;
-  }
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
 }
 
-  
+/* ── Base ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
-
-
-.cropped-image {
-  width: 300px; 
-  height: 400px; 
-  object-fit: cover;
-  object-position: 20%;
-  border-color: black;
-  border-width: 1px;
-  box-shadow: inset;
+/* Ambient glow on body */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(108,99,255,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(56,189,248,0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
 }
 
+main { position: relative; z-index: 1; }
 
-
-/* Typing Words CSS Below this */
-
-
-.container{
-  width: 100%;
-  height: 50px;
+/* ── Typography ─────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.15;
 }
 
+p { color: var(--text-secondary); }
 
-.social-icon:hover {
-  opacity: 0.8;
-  border-color: #ddd;  /* Change border color on hover */
+a {
+  color: var(--accent-2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--accent-3); }
+
+/* ── Gradient text utility ──────────────────────── */
+.gradient-text {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-
-.about-module_skillItem {
-  transition: transform 0.3s ease-in-out; /* Add transition effect for smoother hover */
+.gradient-text-warm {
+  background: var(--grad-warm);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.about-module_skillItem:hover {
-  transform: scale(1.1); /* Scale up the skill item on hover */
+/* ── Cards ──────────────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-mid);
+  transform: translateY(-2px);
 }
 
-
-.custom-list {
-  list-style-type: none; /* Remove default bullets */
-  
+/* ── Project card list ──────────────────────────── */
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
-.custom-list li::before {
-  content: '◉';
-  font-size: 1.2em; /* Adjust the size of the smiley face */
-  margin-right: 0.2em; /* Space between the smiley and the text */
-  font-weight: 600;
-  list-style-position: outside;
+.project-list li {
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 0.35rem;
 }
-
-.custom-list li {
-  font-weight: 410;
-  text-align: center;
-}
-
-.project-list{
-  list-style-type: none;
-}
-
 .project-list li::before {
-  content: '⊚';
-  font-size: 1.2em; /* Adjust the size of the smiley face */
-  margin-right: 0.2em; /* Space between the smiley and the text */
-  font-weight: 600;
-  list-style-position: outside;
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-1);
+  font-size: 0.75rem;
+  top: 0.15em;
 }
 
+/* ── Experience bullet list ─────────────────────── */
+.custom-list {
+  list-style: none;
+  padding: 0;
+}
+.custom-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+.custom-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-1);
+}
 
+/* ── Skill pill ─────────────────────────────────── */
+.about-module_skillItem {
+  display: inline-block;
+  margin: 3px 4px;
+  padding: 4px 14px;
+  background: rgba(108,99,255,0.1);
+  border: 1px solid rgba(108,99,255,0.2);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  color: var(--accent-2);
+  transition: background 0.2s, border-color 0.2s;
+}
+.about-module_skillItem:hover {
+  background: rgba(108,99,255,0.2);
+  border-color: rgba(108,99,255,0.4);
+}
 
+/* ── Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb {
+  background: var(--border-mid);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent-1); }
