@@ -293,7 +293,7 @@ const Home = () => {
         }}>
           <ProjectCard title="Fabric" description={["Utilizing LangGraph, LLMs, A2A, MCP, RAG, and ADK to create a suite of AI Agents to optimize my daily tasks."]} stack="React · Electron · Python · FastAPI · Pydantic · ChromaDB"/>
           <ProjectCard title="DaVinci Learning Graph" description={["Innovating a novel way to understand -- creating a neural map of everything you learn."]} stack=""/>
-          <ProjectCard title="Chordify" description={["AI-powered music and chord generator -- from thought to music in seconds."]} stack="Web Audio API · Next.js · Typescript · Tailwind CSS · OpenAI API"/>
+          <ProjectCard title="Chord Studio" description={["AI-powered music and chord generator -- from thought to music in seconds."]} stack="Web Audio API · Next.js · Typescript · Tailwind CSS · OpenAI API"/>
           <ProjectCard title="Siblings or Dating" description={["CNN (MobileNetV2) using transfer learning to classify Reddit images as siblings or dating. Achieved 80% validation accuracy."]} stack="TensorFlow · Keras · Python · CNN · Django"/>
           <ProjectCard title="Akuna Capital Quant Challenge" description={["Python market-making framework integrating nonlinear optimization, stochastic modeling, and RL for adaptive market intelligence."]} stack="Python · RL · Nonlinear Optimization"/>
           <ProjectCard title="Poker Bot" description={["Monte Carlo counterfactual regret minimization to approximate Nash Equilibrium for 2-player Kuhn's poker."]} stack="Python" />
