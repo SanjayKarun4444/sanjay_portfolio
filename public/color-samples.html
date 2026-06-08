@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette Samples — Sanjay Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #1a1a1a;
+      font-family: 'DM Sans', sans-serif;
+      padding: 4rem 2rem 6rem;
+      color: #f0f0f0;
+      min-height: 100vh;
+    }
+
+    .page-header {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.75rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      color: #f0f0f0;
+    }
+
+    .page-header p {
+      font-size: 0.875rem;
+      color: #888;
+      line-height: 1.6;
+      max-width: 56ch;
+    }
+
+    .page-header code {
+      background: #2a2a2a;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 0.8125rem;
+      color: #c9a46b;
+    }
+
+    /* ── Grid ── */
+    .palettes {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ── Card shell ── */
+    .palette-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    }
+
+    /* ── Top swatch bar ── */
+    .swatch-bar {
+      display: flex;
+      height: 52px;
+    }
+    .swatch-bar span {
+      flex: 1;
+    }
+
+    /* ── Card body ── */
+    .palette-body {
+      padding: 1.5rem;
+    }
+
+    .palette-number {
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
+    .palette-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.625rem;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.25rem;
+    }
+
+    .palette-desc {
+      font-size: 0.8125rem;
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
+      opacity: 0.55;
+    }
+
+    /* ── Demo block ── */
+    .demo-block {
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .demo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.375rem;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.25rem;
+    }
+
+    .demo-sub {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 0.875rem;
+      opacity: 0.6;
+    }
+
+    .demo-pill {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: default;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .demo-link {
+      font-size: 0.8125rem;
+      opacity: 0.5;
+      text-decoration: none;
+    }
+
+    /* ── Token row ── */
+    .token-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+    }
+
+    .token-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .token-swatch {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 6px;
+    }
+
+    .token-label {
+      font-size: 0.55rem;
+      letter-spacing: 0.03em;
+      text-align: center;
+      opacity: 0.45;
+      white-space: nowrap;
+    }
+
+    /* ── Working default badge ── */
+    .working-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 9999px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+      background: rgba(201,164,107,0.2);
+      color: #c9a46b;
+      border: 1px solid rgba(201,164,107,0.35);
+    }
+
+    .footer-note {
+      max-width: 1200px;
+      margin: 3rem auto 0;
+      font-size: 0.75rem;
+      color: #555;
+      line-height: 1.7;
+    }
+    .footer-note code {
+      background: #252525;
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: #c9a46b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>Color Palette Samples</h1>
+    <p>Five distinct palettes for the portfolio redesign. Each card shows the full 6-token system — background, surface, two text levels, accent, and border — in a live demo context. Reply with the palette number to apply it. Swapping is a single-file change in <code>globals.css</code>.</p>
+  </div>
+
+  <div class="palettes">
+
+    <!-- ══════════════════════════════ PALETTE 1: WARM NEUTRAL ══ -->
+    <div class="palette-card">
+      <div class="swatch-bar">
+        <span style="background:#f7f3ee"></span>
+        <span style="background:#ede7de"></span>
+        <span style="background:#2c2320"></span>
+        <span style="background:#8a7a6e"></span>
+        <span style="background:#b89b6a"></span>
+        <span style="background:#d9cfc5"></span>
+      </div>
+      <div class="palette-body" style="background:#f7f3ee; color:#2c2320;">
+        <span class="palette-number">Palette 1</span>
+        <p class="palette-name">Warm Neutral</p>
+        <p class="palette-desc" style="color:#8a7a6e;">Off-whites, warm grays, deep espresso brown, and a warm sand accent. Feels editorial and grounded.</p>
+
+        <div class="demo-block" style="background:#ede7de;">
+          <p class="demo-name" style="color:#2c2320;">Sanjay Karunamoorthy</p>
+          <p class="demo-sub" style="color:#8a7a6e;">Computer Science × Data Science — UVA<br>Software Engineer · Full Stack · ML</p>
+          <a class="demo-pill" style="background:#b89b6a; color:#f7f3ee;">View Work</a>
+          <a class="demo-pill" style="background:transparent; border:1px solid #d9cfc5; color:#2c2320;">Resume</a>
+        </div>
+
+        <div class="token-row">
+          <div class="token-item">
+            <div class="token-swatch" style="background:#f7f3ee; border:1px solid #d9cfc5;"></div>
+            <span class="token-label" style="color:#2c2320;">bg</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#ede7de;"></div>
+            <span class="token-label" style="color:#2c2320;">surface</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#2c2320;"></div>
+            <span class="token-label" style="color:#2c2320;">text-1</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#8a7a6e;"></div>
+            <span class="token-label" style="color:#2c2320;">text-2</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#b89b6a;"></div>
+            <span class="token-label" style="color:#2c2320;">accent</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#d9cfc5;"></div>
+            <span class="token-label" style="color:#2c2320;">border</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════ PALETTE 2: COOL SLATE ═════ -->
+    <div class="palette-card">
+      <div class="swatch-bar">
+        <span style="background:#f2f5f9"></span>
+        <span style="background:#e4eaf2"></span>
+        <span style="background:#0f1522"></span>
+        <span style="background:#6c7a93"></span>
+        <span style="background:#3b82c4"></span>
+        <span style="background:#ccd6e5"></span>
+      </div>
+      <div class="palette-body" style="background:#f2f5f9; color:#0f1522;">
+        <span class="palette-number">Palette 2</span>
+        <p class="palette-name">Cool Slate</p>
+        <p class="palette-desc" style="color:#6c7a93;">Cool whites, slate grays, near-black navy, and a crisp icy-blue CTA. Clean and technical.</p>
+
+        <div class="demo-block" style="background:#e4eaf2;">
+          <p class="demo-name" style="color:#0f1522;">Sanjay Karunamoorthy</p>
+          <p class="demo-sub" style="color:#6c7a93;">Computer Science × Data Science — UVA<br>Software Engineer · Full Stack · ML</p>
+          <a class="demo-pill" style="background:#3b82c4; color:#ffffff;">View Work</a>
+          <a class="demo-pill" style="background:transparent; border:1px solid #ccd6e5; color:#0f1522;">Resume</a>
+        </div>
+
+        <div class="token-row">
+          <div class="token-item">
+            <div class="token-swatch" style="background:#f2f5f9; border:1px solid #ccd6e5;"></div>
+            <span class="token-label" style="color:#0f1522;">bg</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#e4eaf2;"></div>
+            <span class="token-label" style="color:#0f1522;">surface</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#0f1522;"></div>
+            <span class="token-label" style="color:#0f1522;">text-1</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#6c7a93;"></div>
+            <span class="token-label" style="color:#0f1522;">text-2</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#3b82c4;"></div>
+            <span class="token-label" style="color:#0f1522;">accent</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#ccd6e5;"></div>
+            <span class="token-label" style="color:#0f1522;">border</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════ PALETTE 3: DARK MODE PREMIUM ═ -->
+    <div class="palette-card">
+      <div class="swatch-bar">
+        <span style="background:#0c0c0c"></span>
+        <span style="background:#141414"></span>
+        <span style="background:#f2f0ed"></span>
+        <span style="background:#787878"></span>
+        <span style="background:#c9a46b"></span>
+        <span style="background:#1f1f1f"></span>
+      </div>
+      <div class="palette-body" style="background:#0c0c0c; color:#f2f0ed;">
+        <span class="palette-number" style="color:#787878;">Palette 3</span>
+        <p class="palette-name" style="color:#f2f0ed;">Dark Mode Premium <span class="working-badge">working default</span></p>
+        <p class="palette-desc" style="color:#787878;">Deep charcoal, layered dark surfaces, warm off-white text, and a warm gold accent. Confident and refined.</p>
+
+        <div class="demo-block" style="background:#141414;">
+          <p class="demo-name" style="color:#f2f0ed;">Sanjay Karunamoorthy</p>
+          <p class="demo-sub" style="color:#787878;">Computer Science × Data Science — UVA<br>Software Engineer · Full Stack · ML</p>
+          <a class="demo-pill" style="background:#c9a46b; color:#0c0c0c;">View Work</a>
+          <a class="demo-pill" style="background:transparent; border:1px solid #2a2a2a; color:#f2f0ed;">Resume</a>
+        </div>
+
+        <div class="token-row">
+          <div class="token-item">
+            <div class="token-swatch" style="background:#0c0c0c; border:1px solid #1f1f1f;"></div>
+            <span class="token-label" style="color:#787878;">bg</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#141414; border:1px solid #1f1f1f;"></div>
+            <span class="token-label" style="color:#787878;">surface</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#f2f0ed;"></div>
+            <span class="token-label" style="color:#787878;">text-1</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#787878;"></div>
+            <span class="token-label" style="color:#787878;">text-2</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#c9a46b;"></div>
+            <span class="token-label" style="color:#787878;">accent</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#1f1f1f; border:1px solid #2a2a2a;"></div>
+            <span class="token-label" style="color:#787878;">border</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════ PALETTE 4: SOFT MONOCHROME ═══ -->
+    <div class="palette-card">
+      <div class="swatch-bar">
+        <span style="background:#fafafa"></span>
+        <span style="background:#efefef"></span>
+        <span style="background:#0d0d0d"></span>
+        <span style="background:#818181"></span>
+        <span style="background:#7d8f82"></span>
+        <span style="background:#e2e2e2"></span>
+      </div>
+      <div class="palette-body" style="background:#fafafa; color:#0d0d0d;">
+        <span class="palette-number">Palette 4</span>
+        <p class="palette-name">Soft Monochrome</p>
+        <p class="palette-desc" style="color:#818181;">Pure whites, soft grays, true black, and a single muted sage accent. Maximum restraint.</p>
+
+        <div class="demo-block" style="background:#efefef;">
+          <p class="demo-name" style="color:#0d0d0d;">Sanjay Karunamoorthy</p>
+          <p class="demo-sub" style="color:#818181;">Computer Science × Data Science — UVA<br>Software Engineer · Full Stack · ML</p>
+          <a class="demo-pill" style="background:#7d8f82; color:#ffffff;">View Work</a>
+          <a class="demo-pill" style="background:transparent; border:1px solid #e2e2e2; color:#0d0d0d;">Resume</a>
+        </div>
+
+        <div class="token-row">
+          <div class="token-item">
+            <div class="token-swatch" style="background:#fafafa; border:1px solid #e2e2e2;"></div>
+            <span class="token-label" style="color:#0d0d0d;">bg</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#efefef;"></div>
+            <span class="token-label" style="color:#0d0d0d;">surface</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#0d0d0d;"></div>
+            <span class="token-label" style="color:#0d0d0d;">text-1</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#818181;"></div>
+            <span class="token-label" style="color:#0d0d0d;">text-2</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#7d8f82;"></div>
+            <span class="token-label" style="color:#0d0d0d;">accent</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#e2e2e2;"></div>
+            <span class="token-label" style="color:#0d0d0d;">border</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═════════════════════════════ PALETTE 5: INK & PAPER ═════ -->
+    <div class="palette-card">
+      <div class="swatch-bar">
+        <span style="background:#f4efe5"></span>
+        <span style="background:#e9e0ce"></span>
+        <span style="background:#141b2d"></span>
+        <span style="background:#7a7060"></span>
+        <span style="background:#8a6e44"></span>
+        <span style="background:#d5c9b5"></span>
+      </div>
+      <div class="palette-body" style="background:#f4efe5; color:#141b2d;">
+        <span class="palette-number">Palette 5</span>
+        <p class="palette-name">Ink &amp; Paper</p>
+        <p class="palette-desc" style="color:#7a7060;">Cream-parchment background, deep navy ink, warm umber accent. No bright colors — purely tactile and literary.</p>
+
+        <div class="demo-block" style="background:#e9e0ce;">
+          <p class="demo-name" style="color:#141b2d;">Sanjay Karunamoorthy</p>
+          <p class="demo-sub" style="color:#7a7060;">Computer Science × Data Science — UVA<br>Software Engineer · Full Stack · ML</p>
+          <a class="demo-pill" style="background:#8a6e44; color:#f4efe5;">View Work</a>
+          <a class="demo-pill" style="background:transparent; border:1px solid #d5c9b5; color:#141b2d;">Resume</a>
+        </div>
+
+        <div class="token-row">
+          <div class="token-item">
+            <div class="token-swatch" style="background:#f4efe5; border:1px solid #d5c9b5;"></div>
+            <span class="token-label" style="color:#141b2d;">bg</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#e9e0ce;"></div>
+            <span class="token-label" style="color:#141b2d;">surface</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#141b2d;"></div>
+            <span class="token-label" style="color:#141b2d;">text-1</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#7a7060;"></div>
+            <span class="token-label" style="color:#141b2d;">text-2</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#8a6e44;"></div>
+            <span class="token-label" style="color:#141b2d;">accent</span>
+          </div>
+          <div class="token-item">
+            <div class="token-swatch" style="background:#d5c9b5;"></div>
+            <span class="token-label" style="color:#141b2d;">border</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /palettes -->
+
+  <p class="footer-note">
+    All palettes shown with <strong>Cormorant Garamond</strong> (display) and <strong>DM Sans</strong> (body) — the new font pairing applied across the site.<br>
+    The portfolio currently runs <strong>Palette 3 (Dark Mode Premium)</strong> as the working default.<br>
+    To swap: update only the six <code>--color-*</code> variables at the top of <code>src/app/globals.css</code>.
+  </p>
+
+</body>
+</html>

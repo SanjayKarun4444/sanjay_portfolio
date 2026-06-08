@@ -1,180 +1,312 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN SYSTEM
+   ───────────────────────────────────────────────────────────────
+   Fonts  : Cormorant Garamond (display) · DM Sans (body)
+   Grid   : 8pt — all spacing is a multiple of 0.5rem (8px)
+   Scale  : 4 type sizes — hero / heading / body / caption
+   Colors : CSS custom properties only — swap by editing :root
+   Motion : max 250ms, ease — no gratuitous animation
+═══════════════════════════════════════════════════════════════ */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ── Design tokens ──────────────────────────────── */
+/* ── Active palette: Dark Mode Premium (Palette 3)
+   ─────────────────────────────────────────────────
+   To swap palettes, replace ONLY the values here.
+   Every component references these tokens — nothing
+   else needs to change.
+────────────────────────────────────────────────── */
 :root {
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  /* Backgrounds */
+  --color-bg:        #0c0c0c;   /* page background */
+  --color-surface:   #141414;   /* card / panel */
+  --color-surface-2: #1a1a1a;   /* elevated / hover state */
 
-  --bg-base:        #080b12;
-  --bg-surface:     #0f1420;
-  --bg-card:        #131926;
-  --bg-card-hover:  #181f2e;
-  --border-subtle:  rgba(255,255,255,0.07);
-  --border-mid:     rgba(255,255,255,0.12);
+  /* Text */
+  --color-text-1:    #f2f0ed;   /* primary — warm off-white */
+  --color-text-2:    #787878;   /* secondary */
+  --color-text-3:    #3d3d3d;   /* muted / disabled */
 
-  --accent-1: #6c63ff;
-  --accent-2: #a78bfa;
-  --accent-3: #38bdf8;
-  --accent-warm: #fb923c;
+  /* Accent — one color only */
+  --color-accent:         #c9a46b;
+  --color-accent-subtle:  rgba(201, 164, 107, 0.1);
+  --color-accent-border:  rgba(201, 164, 107, 0.25);
 
-  --grad-primary: linear-gradient(135deg, #6c63ff 0%, #a78bfa 50%, #38bdf8 100%);
-  --grad-text:    linear-gradient(135deg, #a78bfa 0%, #38bdf8 100%);
-  --grad-warm:    linear-gradient(135deg, #fb923c 0%, #f43f5e 100%);
+  /* Borders */
+  --color-border:   rgba(255, 255, 255, 0.08);
+  --color-border-2: rgba(255, 255, 255, 0.14);
 
-  --text-primary:   #f0f4ff;
-  --text-secondary: #8b95b0;
-  --text-muted:     #4a5168;
-
-  --radius-sm:  6px;
-  --radius-md:  12px;
-  --radius-lg:  20px;
-  --radius-xl:  28px;
+  /* Focus ring (accessibility) */
+  --color-focus:    rgba(201, 164, 107, 0.55);
 }
 
-/* ── Base ───────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; }
+/* ── Spacing — strict 8pt grid ─────────────────────
+   Use these variables, not arbitrary px values.
+   sp-1 = 8px, sp-2 = 16px, …
+────────────────────────────────────────────────── */
+:root {
+  --sp-1:   0.5rem;   /*  8px */
+  --sp-2:   1rem;     /* 16px */
+  --sp-3:   1.5rem;   /* 24px */
+  --sp-4:   2rem;     /* 32px */
+  --sp-5:   2.5rem;   /* 40px */
+  --sp-6:   3rem;     /* 48px */
+  --sp-8:   4rem;     /* 64px */
+  --sp-10:  5rem;     /* 80px */
+  --sp-12:  6rem;     /* 96px */
+}
 
-html { scroll-behavior: smooth; }
+/* ── Typography — 4 sizes ────────────────────────── */
+:root {
+  /* Sizes */
+  --text-hero:    clamp(3.25rem, 9vw, 5.5rem);  /* name, page hero */
+  --text-heading: clamp(1.375rem, 3vw, 1.875rem); /* section titles */
+  --text-body:    1rem;                           /* all body copy */
+  --text-caption: 0.75rem;                        /* labels, dates  */
+
+  /* Families */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Line heights */
+  --lh-hero:    1.05;
+  --lh-heading: 1.2;
+  --lh-body:    1.75;
+
+  /* Letter spacing */
+  --ls-tight:   -0.03em;
+  --ls-wide:     0.06em;
+  --ls-widest:   0.14em;
+}
+
+/* ── Border radius ────────────────────────────────── */
+:root {
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-full: 9999px;
+}
+
+/* ── Transitions ──────────────────────────────────── */
+:root {
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-ui: 200ms ease;
+  --transition-in: 600ms var(--ease-out);
+}
+
+/* ══════════════════════════════════════════════════
+   BASE
+══════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll; /* prevent layout shift when scrollbar appears */
+}
 
 body {
-  background-color: var(--bg-base);
-  color: var(--text-primary);
+  background-color: var(--color-bg);
+  color: var(--color-text-1);
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ambient glow on body */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(108,99,255,0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(56,189,248,0.06) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
+/* ── Accessibility: visible focus ─────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
 }
 
-main { position: relative; z-index: 1; }
-
-/* ── Typography ─────────────────────────────────── */
-h1, h2, h3, h4, h5, h6 {
+/* ── Typography defaults ─────────────────────────── */
+h1, h2, h3 {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  line-height: 1.15;
+  letter-spacing: var(--ls-tight);
+  color: var(--color-text-1);
+  line-height: var(--lh-heading);
+  font-weight: 600;
 }
 
-p { color: var(--text-secondary); }
+p {
+  color: var(--color-text-2);
+}
 
 a {
-  color: var(--accent-2);
+  color: var(--color-accent);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: opacity var(--transition-ui);
 }
-a:hover { color: var(--accent-3); }
+a:hover { opacity: 0.7; }
 
-/* ── Gradient text utility ──────────────────────── */
-.gradient-text {
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* ── Scrollbar ────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-2);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-3); }
+
+/* ══════════════════════════════════════════════════
+   ENTRANCE ANIMATION
+   Applied to hero elements only — page load, not scroll.
+   Keeps motion purposeful and restrained.
+══════════════════════════════════════════════════ */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.gradient-text-warm {
-  background: var(--grad-warm);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.animate-in {
+  animation: fadeUp var(--transition-in) both;
 }
 
-/* ── Cards ──────────────────────────────────────── */
+/* Stagger delays for hero elements */
+.animate-delay-1 { animation-delay: 80ms; }
+.animate-delay-2 { animation-delay: 180ms; }
+.animate-delay-3 { animation-delay: 300ms; }
+.animate-delay-4 { animation-delay: 420ms; }
+
+/* ══════════════════════════════════════════════════
+   LAYOUT UTILITIES
+══════════════════════════════════════════════════ */
+
+/* Horizontal divider with fade-out edges */
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border) 20%,
+    var(--color-border) 80%,
+    transparent
+  );
+  margin: var(--sp-8) 0;
+  border: none;
+}
+
+/* Section eyebrow label (sits above headings) */
+.eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--sp-1);
+}
+
+/* ══════════════════════════════════════════════════
+   CARD
+══════════════════════════════════════════════════ */
+
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: background 0.25s, border-color 0.25s, transform 0.25s;
-}
-.card:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-mid);
-  transform: translateY(-2px);
+  transition: border-color var(--transition-ui), background var(--transition-ui);
 }
 
-/* ── Project card list ──────────────────────────── */
+.card:hover {
+  border-color: var(--color-border-2);
+  background: var(--color-surface-2);
+}
+
+/* ══════════════════════════════════════════════════
+   SKILL PILL
+   Matches both the new .pill class and the legacy
+   .about-module_skillItem used in about.tsx / page.tsx
+══════════════════════════════════════════════════ */
+
+.pill,
+.about-module_skillItem {
+  display: inline-block;
+  padding: 3px 12px;
+  margin: 3px 3px;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-caption);
+  font-family: var(--font-body);
+  color: var(--color-text-2);
+  line-height: 1.8;
+  transition: border-color var(--transition-ui), color var(--transition-ui);
+}
+
+.pill:hover,
+.about-module_skillItem:hover {
+  border-color: var(--color-accent-border);
+  color: var(--color-text-1);
+}
+
+/* ══════════════════════════════════════════════════
+   BULLET LIST (experience / project descriptions)
+══════════════════════════════════════════════════ */
+
+.bullet-list,
+.custom-list,
 .project-list {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-.project-list li {
-  padding-left: 1.25rem;
-  position: relative;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.65;
-  margin-bottom: 0.35rem;
-}
-.project-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--accent-1);
-  font-size: 0.75rem;
-  top: 0.15em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
-/* ── Experience bullet list ─────────────────────── */
-.custom-list {
-  list-style: none;
-  padding: 0;
-}
-.custom-list li {
+.bullet-list li,
+.custom-list li,
+.project-list li {
   position: relative;
-  padding-left: 1.5rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.75rem;
+  padding-left: var(--sp-3);
+  color: var(--color-text-2);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
 }
-.custom-list li::before {
+
+/* Small dot marker in accent color */
+.bullet-list li::before,
+.custom-list li::before,
+.project-list li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.65em;
-  width: 6px;
-  height: 6px;
+  top: 0.72em;   /* visually centers on cap-height */
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
-  background: var(--accent-1);
+  background: var(--color-accent);
+  opacity: 0.7;
 }
 
-/* ── Skill pill ─────────────────────────────────── */
-.about-module_skillItem {
-  display: inline-block;
-  margin: 3px 4px;
-  padding: 4px 14px;
-  background: rgba(108,99,255,0.1);
-  border: 1px solid rgba(108,99,255,0.2);
-  border-radius: 100px;
-  font-size: 0.85rem;
-  color: var(--accent-2);
-  transition: background 0.2s, border-color 0.2s;
-}
-.about-module_skillItem:hover {
-  background: rgba(108,99,255,0.2);
-  border-color: rgba(108,99,255,0.4);
-}
+/* ══════════════════════════════════════════════════
+   EXPERIENCE LEFT-ACCENT BAR
+   Single consistent color — no per-card gradients.
+══════════════════════════════════════════════════ */
 
-/* ── Scrollbar ──────────────────────────────────── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-base); }
-::-webkit-scrollbar-thumb {
-  background: var(--border-mid);
-  border-radius: 3px;
+.exp-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+  opacity: 0.6;
 }
-::-webkit-scrollbar-thumb:hover { background: var(--accent-1); }

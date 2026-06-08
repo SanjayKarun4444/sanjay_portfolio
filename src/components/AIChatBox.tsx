@@ -54,9 +54,9 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
     >
       <div
         style={{
-          background: "#0f1420",
-          border: "1px solid rgba(255,255,255,0.1)",
-          borderRadius: "20px",
+          background: "var(--color-surface)",
+          border: "1px solid var(--color-border-2)",
+          borderRadius: "var(--radius-lg)",
           display: "flex",
           flexDirection: "column",
           height: "520px",
@@ -67,7 +67,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
         <div
           style={{
             padding: "1rem 1.25rem",
-            borderBottom: "1px solid rgba(255,255,255,0.07)",
+            borderBottom: "1px solid var(--color-border)",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -80,14 +80,14 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
                 width: "30px",
                 height: "30px",
                 borderRadius: "50%",
-                background: "rgba(108,99,255,0.15)",
-                border: "1px solid rgba(108,99,255,0.3)",
+                background: "var(--color-accent-subtle)",
+                border: "1px solid var(--color-accent-border)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
-              <Bot size={15} color="#a78bfa" />
+              <Bot size={15} color="var(--color-accent)" />
             </div>
             <div>
               <p
@@ -95,13 +95,13 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
                   fontFamily: "var(--font-display)",
                   fontWeight: 700,
                   fontSize: "0.875rem",
-                  color: "#f0f4ff",
+                  color: "var(--color-text-1)",
                   margin: 0,
                 }}
               >
                 Ask about Sanjay
               </p>
-              <p style={{ fontSize: "0.7rem", color: "#4a5168", margin: 0 }}>
+              <p style={{ fontSize: "0.7rem", color: "var(--color-text-3)", margin: 0 }}>
                 AI-powered · RAG
               </p>
             </div>
@@ -118,7 +118,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
               alignItems: "center",
               justifyContent: "center",
               cursor: "pointer",
-              color: "#8b95b0",
+              color: "var(--color-text-2)",
             }}
           >
             <X size={13} />
@@ -175,27 +175,27 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
                   width: "48px",
                   height: "48px",
                   borderRadius: "50%",
-                  background: "rgba(108,99,255,0.1)",
-                  border: "1px solid rgba(108,99,255,0.2)",
+                  background: "var(--color-accent-subtle)",
+                  border: "1px solid var(--color-accent-border)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                 }}
               >
-                <Bot size={22} color="#a78bfa" />
+                <Bot size={22} color="var(--color-accent)" />
               </div>
               <p
                 style={{
                   fontFamily: "var(--font-display)",
                   fontWeight: 700,
                   fontSize: "0.9375rem",
-                  color: "#f0f4ff",
+                  color: "var(--color-text-1)",
                   margin: 0,
                 }}
               >
                 Ask me anything
               </p>
-              <p style={{ fontSize: "0.8rem", color: "#8b95b0", margin: 0, lineHeight: 1.6 }}>
+              <p style={{ fontSize: "0.8rem", color: "var(--color-text-2)", margin: 0, lineHeight: 1.6 }}>
                 I can answer questions about Sanjay&apos;s experience, projects, and skills.
               </p>
             </div>
@@ -221,7 +221,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
             style={{
               background: "transparent",
               border: "none",
-              color: "#4a5168",
+              color: "var(--color-text-3)",
               cursor: "pointer",
               padding: "6px",
               borderRadius: "8px",
@@ -245,11 +245,11 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
               borderRadius: "100px",
               padding: "0.45rem 1rem",
               fontSize: "0.875rem",
-              color: "#f0f4ff",
+              color: "var(--color-text-1)",
               outline: "none",
               fontFamily: "var(--font-body)",
             }}
-            onFocus={e => (e.target.style.borderColor = "rgba(108,99,255,0.4)")}
+            onFocus={e => (e.target.style.borderColor = "rgba(201,164,107,0.4)")}
             onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.09)")}
           />
 
@@ -270,7 +270,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
               justifyContent: "center",
               cursor: input.length > 0 ? "pointer" : "not-allowed",
               flexShrink: 0,
-              color: input.length > 0 ? "#fff" : "#4a5168",
+              color: input.length > 0 ? "#fff" : "var(--color-text-3)",
             }}
           >
             <SendHorizonal size={14} />
@@ -307,15 +307,15 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
             width: "24px",
             height: "24px",
             borderRadius: "50%",
-            background: "rgba(108,99,255,0.15)",
-            border: "1px solid rgba(108,99,255,0.25)",
+            background: "var(--color-accent-subtle)",
+            border: "1px solid var(--color-accent-border)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexShrink: 0,
           }}
         >
-          <Bot size={12} color="#a78bfa" />
+          <Bot size={12} color="var(--color-accent)" />
         </div>
       )}
 
@@ -329,7 +329,7 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
             : "linear-gradient(135deg, #6c63ff, #a78bfa)",
           border: isAI ? "1px solid rgba(255,255,255,0.07)" : "none",
           fontSize: "0.875rem",
-          color: "#f0f4ff",
+          color: "var(--color-text-1)",
           lineHeight: 1.6,
         }}
       >

@@ -12,33 +12,33 @@ export default function AIChatButton() {
       <button
         onClick={() => setChatBoxOpen(true)}
         title="Open AI chat"
+        aria-label="Open AI chat"
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: "34px",
-          height: "34px",
-          borderRadius: "100px",
-          border: "1px solid rgba(108,99,255,0.3)",
-          background: "rgba(108,99,255,0.1)",
-          color: "#a78bfa",
+          width: "32px",
+          height: "32px",
+          borderRadius: "var(--radius-full)",
+          border: "1px solid var(--color-accent-border)",
+          background: "var(--color-accent-subtle)",
+          color: "var(--color-accent)",
           cursor: "pointer",
-          transition: "background 0.2s, border-color 0.2s, transform 0.15s",
+          transition: "background var(--transition-ui), border-color var(--transition-ui)",
+          flexShrink: 0,
         }}
         onMouseEnter={e => {
           const el = e.currentTarget;
-          el.style.background = "rgba(108,99,255,0.2)";
-          el.style.borderColor = "rgba(108,99,255,0.5)";
-          el.style.transform = "scale(1.05)";
+          el.style.background = "rgba(201,164,107,0.18)";
+          el.style.borderColor = "rgba(201,164,107,0.45)";
         }}
         onMouseLeave={e => {
           const el = e.currentTarget;
-          el.style.background = "rgba(108,99,255,0.1)";
-          el.style.borderColor = "rgba(108,99,255,0.3)";
-          el.style.transform = "scale(1)";
+          el.style.background = "var(--color-accent-subtle)";
+          el.style.borderColor = "var(--color-accent-border)";
         }}
       >
-        <Bot size={16} />
+        <Bot size={15} />
       </button>
       <AIChatBox open={chatBoxOpen} onClose={() => setChatBoxOpen(false)} />
     </>
