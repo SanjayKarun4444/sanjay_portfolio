@@ -259,9 +259,10 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
             title="Send"
             style={{
               background: input.length > 0
-                ? "linear-gradient(135deg, #6c63ff, #a78bfa)"
-                : "rgba(255,255,255,0.05)",
-              border: "none",
+                ? "var(--color-accent)"
+                : "var(--color-surface-2)",
+              border: "1px solid",
+              borderColor: input.length > 0 ? "var(--color-accent)" : "var(--color-border)",
               borderRadius: "50%",
               width: "32px",
               height: "32px",
@@ -270,7 +271,8 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
               justifyContent: "center",
               cursor: input.length > 0 ? "pointer" : "not-allowed",
               flexShrink: 0,
-              color: input.length > 0 ? "#fff" : "var(--color-text-3)",
+              color: input.length > 0 ? "var(--color-bg)" : "var(--color-text-3)",
+              transition: "background var(--transition-ui), border-color var(--transition-ui)",
             }}
           >
             <SendHorizonal size={14} />
@@ -325,11 +327,12 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
           padding: "0.6rem 0.875rem",
           borderRadius: isAI ? "4px 16px 16px 16px" : "16px 4px 16px 16px",
           background: isAI
-            ? "rgba(255,255,255,0.05)"
-            : "linear-gradient(135deg, #6c63ff, #a78bfa)",
-          border: isAI ? "1px solid rgba(255,255,255,0.07)" : "none",
+            ? "var(--color-surface-2)"
+            : "var(--color-accent)",
+          border: isAI ? "1px solid var(--color-border)" : "none",
           fontSize: "0.875rem",
-          color: "var(--color-text-1)",
+          /* User bubbles: dark bg text; AI bubbles: primary text */
+          color: isAI ? "var(--color-text-1)" : "var(--color-bg)",
           lineHeight: 1.6,
         }}
       >
@@ -339,17 +342,19 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
               <Link
                 {...props}
                 href={props.href ?? ""}
-                style={{ color: "#38bdf8", textDecoration: "underline" }}
+                style={{ color: "var(--color-accent)", textDecoration: "underline" }}
               />
             ),
             p: ({ node, ...props }) => (
-              <p {...props} style={{ margin: "0.5rem 0 0" }} className="first:mt-0" />
+              /* color:inherit stops the global `p { color: var(--color-text-2) }`
+                 from overriding the bubble's own text color */
+              <p {...props} style={{ margin: "0.5rem 0 0", color: "inherit" }} className="first:mt-0" />
             ),
             ul: ({ node, ...props }) => (
-              <ul {...props} style={{ marginTop: "0.5rem", paddingLeft: "1.25rem" }} />
+              <ul {...props} style={{ marginTop: "0.5rem", paddingLeft: "1.25rem", color: "inherit" }} />
             ),
             li: ({ node, ...props }) => (
-              <li {...props} style={{ marginTop: "0.25rem" }} />
+              <li {...props} style={{ marginTop: "0.25rem", color: "inherit" }} />
             ),
           }}
         >

@@ -114,21 +114,20 @@
       "role": "Software Development Intern",
       "date": "June 2025 – August 2025",
       "details": [
-        "Pioneered an MVP dashboard for a Project Development Life Cycle management system based on Shift Left methodology; created a REST API leveraging Django, PostgreSQL, TypeScript, and React; scoped to benefit 3000+ engineers.",
-        "Partnered with 15+ Senior Directors, VPs, PMs, Engineers and SMEs in a cross-functional team to design a product workflow optimization system with JSON integration, Redis caching, GraphQL querying, and Azure DevOps/Slack automation.",
-        "Implemented efficient GET/POST requests for bidirectional synchronization and timed system reloads to prevent race conditions.",
-        "Engineered an email automation script by pre-processing 17,000+ repositories to reach out to 2000+ system owners; utilized Power BI and Excel for data input organization and communication for stakeholders, using pandas for email sending automation."
+        "Pioneered an end-to-end MVP, involving REST APIs, for a Project Development Life Cycle management system based on Shift Left method, scoped to unlock $15M–$20M annually in engineering productivity across 3000+ engineers.",
+        "Partnered with 15+ Senior Directors, VPs, and SMEs in a cross-functional tiger team to design a bi-directional data synchronizing single source of truth system with document parsing, Slack, Azure Devops and Word APIs.",
+        "Automated email notifications by performing a data analysis on DORA metrics by processing 17,000+ repos and fetching 2,000+ system owners using GraphQL and pandas."
       ]
     },
     {
-      "company": "3M",
+      "company": "SS Technology",
       "role": "Software Engineer Intern (Contract)",
       "date": "May 2024 – July 2024",
       "details": [
-        "Built a Spring Boot/Batch solution processing 2M+ data points from Salesforce/SharePoint.",
-        "Used Apache Airflow and Kafka for streaming batch pipelines, improving efficiency by 6%.",
-        "Leveraged Amazon Bedrock + Titan Text Embeddings for RAG-based semantic search.",
-        "Integrated kNN vectors with OpenSearch and prompt engineering with Claude API."
+        "Contributed to a data processing solution with Spring Boot and Batch, for 3M handling over 2M search data points.",
+        "Optimized scalable big data pipelines via Kafka + Airflow, leading to a 3% improvement in semantic search time.",
+        "Enhanced a RAG-based system, generating high-dimensional embeddings with AWS Bedrock (Titan Text Embeddings), ",
+                "integrating kNN vector search in OpenSearch, using Claude API prompt engineering for context relevant responses."
       ]
     },
     {
@@ -136,9 +135,10 @@
       "role": "Full Stack Engineer Intern",
       "date": "December 2023 – May 2024",
       "details": [
-        "Led interns to develop a REST API; used Jira for sprints; improved project timelines by 20%.",
-        "Built secure auth using MERN stack with JWT and Bcrypt (replacing SHA-256).",
-        "Configured AWS EC2, S3; containerized with Docker, orchestrated with Kubernetes; tested via GitHub Actions."
+        "Led a group of interns to develop a secure REST API using MERN, JWT and Bcrypt. Worked on a CI/CD environment",
+              "for an employee management app incorporating Docker, Kubernetes, Jenkins + Bitbucket.",
+        "Embedded with cross-functional stakeholders in a forward-deployed capacity, translating client requirements into" ,
+                "production-ready MERN features and improving delivery speed and alignment with business needs."
       ]
     }
   ]
