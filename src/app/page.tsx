@@ -291,6 +291,7 @@ const Home = () => {
           gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
           gap: "var(--sp-2)",
         }}>
+          <ProjectCard title="Common" description={["Innovative proximity-baserd social networking application to connect people nearby."]} stack="Flutter · Dart · Firebase"/>
           <ProjectCard title="Fabric" description={["Utilizing LangGraph, LLMs, A2A, MCP, RAG, and ADK to create a suite of AI Agents to optimize my daily tasks."]} stack="React · Electron · Python · FastAPI · Pydantic · ChromaDB"/>
           <ProjectCard title="DaVinci Learning Graph" description={["Innovating a novel way to understand, creating a neural map of everything you learn."]} stack=""/>
           <ProjectCard title="Chord Studio" description={["AI-powered music and chord generator, from thought to music in seconds."]} stack="Web Audio API · Next.js · Typescript · Tailwind CSS · OpenAI API"/>
