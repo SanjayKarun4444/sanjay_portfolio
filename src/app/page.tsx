@@ -254,7 +254,7 @@ const Home = () => {
             </ul>
           </div>
 
-          <div className="card" style={{ position: "relative", overflow: "hidden", padding: "var(--sp-4) var(--sp-4) var(--sp-4) calc(var(--sp-4) + 10px)" }}>
+          {/* <div className="card" style={{ position: "relative", overflow: "hidden", padding: "var(--sp-4) var(--sp-4) var(--sp-4) calc(var(--sp-4) + 10px)" }}>
             <div className="exp-accent-bar" />
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "var(--sp-1)", marginBottom: "var(--sp-2)" }}>
               <div>
@@ -274,7 +274,7 @@ const Home = () => {
               <li>Designed a secure auth system with React, Express, Node.js, and MongoDB using JWT and Bcrypt — eliminating all major authentication vulnerabilities.</li>
               <li>Automated monitoring tasks in Linux/Unix with Bash scripting to reduce manual setup time.</li>
             </ul>
-          </div>
+          </div> */}
 
         </div>
       </section>
