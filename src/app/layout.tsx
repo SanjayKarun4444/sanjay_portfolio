@@ -1,27 +1,26 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 /* ── Fonts ─────────────────────────────────────────────────────
-   Cormorant Garamond: strong-character serif for display text.
-   DM Sans: clean, legible sans-serif for body copy.
+   Manrope: modern geometric sans-serif for display text.
+   Inter: highly legible sans-serif for body copy.
    Both loaded via next/font for optimal performance + no FOUT.
 ──────────────────────────────────────────────────────────────── */
-const cormorant = Cormorant_Garamond({
+const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
-  weight: ["300", "400", "500"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -36,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
       <body>
         <ThemeProvider attribute="class">
           <Navbar />
