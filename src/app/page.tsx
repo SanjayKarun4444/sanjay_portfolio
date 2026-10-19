@@ -141,43 +141,43 @@ const Home = () => {
       {/* ════════════════════════════════════════ ABOUT ═══════ */}
       <section>
         <SectionHeading eyebrow="About">Who I Am</SectionHeading>
-        <p style={{
-          fontSize: "var(--text-body)",
-          lineHeight: "var(--lh-body)",
-          color: "var(--color-text-2)",
-          maxWidth: "58ch",
-        }}>
-          I&apos;m a UVA Alumn with a B.S. in Computer Science with a Minor in Data Science.
-          I&apos;m passionate about solving hard problems and building things that
-          matter from production infrastructure, ML systems, and everything in between.
+        <p style={{ fontSize: "var(--text-body)", lineHeight: "var(--lh-body)", color: "var(--color-text-2)", maxWidth: "58ch" }}>
+          I&apos;m a University of Virginia graduate with a B.S. in Computer Science and a minor in Data Science. I enjoy building reliable software, data-intensive systems, and practical AI applications.
         </p>
-
-        {/* Skills */}
         <div style={{ marginTop: "var(--sp-5)" }}>
           <span className="eyebrow">Skills</span>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--sp-2)", marginTop: "var(--sp-2)" }}>
-            <div className="card" style={{ padding: "var(--sp-3)" }}>
-              <p style={{ fontSize: "var(--text-caption)", fontWeight: 500, letterSpacing: "var(--ls-wide)", textTransform: "uppercase", color: "var(--color-text-3)", marginBottom: "var(--sp-2)" }}>
-                Languages
-              </p>
-              <div>
-                {["Java", "Python", "C", "JavaScript", "TypeScript", "HTML + CSS", "SQL"].map(s => (
-                  <span key={s} className="pill">{s}</span>
-                ))}
+            {[
+              { heading: "Languages", skills: "Python · Java · SQL · C++ · JavaScript · TypeScript · HTML · CSS" },
+              { heading: "Backend & Databases", skills: "Spring Boot · Django · Node.js · PostgreSQL · Redis · Firebase · Supabase" },
+              { heading: "Cloud & Infrastructure", skills: "AWS Lambda · Batch · ECS · S3 · SQS · SNS · Terraform · Docker · Kafka · Airflow" },
+              { heading: "Tools & AI/ML", skills: "Git · JUnit · Mockito · Postman · Pandas · LLMs · RAG · Agentic AI" },
+            ].map(({ heading, skills }) => (
+              <div key={heading} className="card" style={{ padding: "var(--sp-3)" }}>
+                <p style={{ fontSize: "var(--text-caption)", fontWeight: 500, letterSpacing: "var(--ls-wide)", textTransform: "uppercase", color: "var(--color-text-3)", marginBottom: "var(--sp-2)" }}>{heading}</p>
+                <p style={{ fontSize: "var(--text-caption)", lineHeight: 1.7, color: "var(--color-text-2)", margin: 0 }}>{skills}</p>
               </div>
-            </div>
-            <div className="card" style={{ padding: "var(--sp-3)" }}>
-              <p style={{ fontSize: "var(--text-caption)", fontWeight: 500, letterSpacing: "var(--ls-wide)", textTransform: "uppercase", color: "var(--color-text-3)", marginBottom: "var(--sp-2)" }}>
-                Technologies
-              </p>
-              <div>
-                {["Spring", "Django", "React", "OpenSearch", "Next.js", "Node.js", "PyTorch", "MongoDB", "Express", "Kafka", "Git", "REST API"].map(s => (
-                  <span key={s} className="pill">{s}</span>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+      </section>
+
+      <hr className="divider" />
+
+      {/* ════════════════════════════════════════ EDUCATION ══ */}
+      <section>
+        <SectionHeading eyebrow="Education">University of Virginia</SectionHeading>
+        <div className="card" style={{ padding: "var(--sp-4)" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "var(--sp-1)" }}>
+            <div>
+              <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "1.125rem", letterSpacing: "var(--ls-tight)" }}>School of Engineering</h3>
+              <p style={{ color: "var(--color-text-2)", margin: "var(--sp-1) 0 0" }}>B.S. in Computer Science, Minor in Data Science</p>
+            </div>
+            <span style={{ fontSize: "var(--text-caption)", color: "var(--color-text-3)" }}>Charlottesville, VA · May 2026</span>
+          </div>
+          <p style={{ fontSize: "var(--text-caption)", color: "var(--color-text-3)", marginBottom: 0 }}>GPA: 3.8</p>
+        </div>
+        <p style={{ marginTop: "var(--sp-2)", fontSize: "var(--text-caption)", color: "var(--color-text-3)" }}>Certification: AWS Certified Cloud Practitioner</p>
       </section>
 
       <hr className="divider" />
@@ -192,19 +192,14 @@ const Home = () => {
             <div className="exp-accent-bar" />
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "var(--sp-1)", marginBottom: "var(--sp-2)" }}>
               <div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "1.125rem", letterSpacing: "var(--ls-tight)" }}>
-                  University of Virginia
-                </h3>
-                <p style={{ fontSize: "var(--text-caption)", color: "var(--color-accent)", margin: 0, fontWeight: 500 }}>
-                  Undergraduate AI Researcher
-                </p>
+                <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "1.125rem", letterSpacing: "var(--ls-tight)" }}>Fannie Mae</h3>
+                <p style={{ fontSize: "var(--text-caption)", color: "var(--color-accent)", margin: 0, fontWeight: 500 }}>Software Engineer</p>
               </div>
-              <span style={{ fontSize: "var(--text-caption)", color: "var(--color-text-3)", whiteSpace: "nowrap" }}>
-                Aug 2025 – Present
-              </span>
+              <span style={{ fontSize: "var(--text-caption)", color: "var(--color-text-3)", whiteSpace: "nowrap" }}>Jul 2026 – Present</span>
             </div>
             <ul className="bullet-list">
-              <li>Training Reinforcement Learning agents to collaborate with humans to improve task performance using Proximal Policy Optimization. Conducting experiments in multi-agent settings to analyze cooperation, incentives, and emergent behaviors.</li>
+              <li>Reduced event-processing latency in a production ETL pipeline by 38% by migrating XML payload splitting from ECS/AWS Batch to AWS Lambda, eliminating approximately 60 seconds of startup overhead and enabling parallel execution.</li>
+              <li>Developing Python- and SQL-based reconciliation and exception-handling logic for an AWS Aurora-backed loan-processing pipeline, validating record completeness and detecting partial data loss across downstream services.</li>
             </ul>
           </div>
 
@@ -212,22 +207,15 @@ const Home = () => {
             <div className="exp-accent-bar" />
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "var(--sp-1)", marginBottom: "var(--sp-2)" }}>
               <div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "1.125rem", letterSpacing: "var(--ls-tight)" }}>
-                  GEICO
-                </h3>
-                <p style={{ fontSize: "var(--text-caption)", color: "var(--color-accent)", margin: 0, fontWeight: 500 }}>
-                  Software Development Intern
-                </p>
+                <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "1.125rem", letterSpacing: "var(--ls-tight)" }}>GEICO</h3>
+                <p style={{ fontSize: "var(--text-caption)", color: "var(--color-accent)", margin: 0, fontWeight: 500 }}>Software Development Intern</p>
               </div>
-              <span style={{ fontSize: "var(--text-caption)", color: "var(--color-text-3)", whiteSpace: "nowrap" }}>
-                Jun 2025 – Aug 2025
-              </span>
+              <span style={{ fontSize: "var(--text-caption)", color: "var(--color-text-3)", whiteSpace: "nowrap" }}>Jun 2025 – Aug 2025</span>
             </div>
             <ul className="bullet-list">
-              <li>Pioneered an MVP dashboard for a Project Development Life Cycle management system based on Shift Left methodology; built a REST API with Django, PostgreSQL, TypeScript, and React — scoped to benefit 3,000+ engineers.</li>
-              <li>Partnered with 15+ Senior Directors, VPs, PMs, and SMEs to design a workflow optimization system with JSON integration, Redis caching, GraphQL, and Azure DevOps/Slack automation.</li>
-              <li>Implemented bidirectional synchronization and timed reloads to prevent race conditions.</li>
-              <li>Engineered an email automation script by pre-processing 17,000+ repos to reach 2,000+ system owners; used Power BI, Excel, and pandas for data organization and delivery.</li>
+              <li>Led development of a phase-gated PDLC system for project intake, including LLM-drafted PRDs and risk scores; projected to save $158K annually and deployed to AKS with Terraform and Azure Pipelines CI/CD.</li>
+              <li>Architected a Redis cache-aside layer that reduced search latency by 88% (approximately 500 ms to under 60 ms); used Prometheus to identify bottlenecks and decoupled Azure DevOps ticket creation with RabbitMQ to cut product-creation latency by 23%.</li>
+              <li>Delivered a GraphQL and pandas automation pipeline to analyze DORA metrics across 17,000+ repositories, identify 2,000+ system owners, and automate targeted email notifications.</li>
             </ul>
           </div>
 
@@ -235,46 +223,16 @@ const Home = () => {
             <div className="exp-accent-bar" />
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "var(--sp-1)", marginBottom: "var(--sp-2)" }}>
               <div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "1.125rem", letterSpacing: "var(--ls-tight)" }}>
-                  SS Technology Consultants
-                </h3>
-                <p style={{ fontSize: "var(--text-caption)", color: "var(--color-accent)", margin: 0, fontWeight: 500 }}>
-                  Software Engineer Intern
-                </p>
+                <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "1.125rem", letterSpacing: "var(--ls-tight)" }}>SS Technology Consultants Inc</h3>
+                <p style={{ fontSize: "var(--text-caption)", color: "var(--color-accent)", margin: 0, fontWeight: 500 }}>Software Engineer Intern</p>
               </div>
-              <span style={{ fontSize: "var(--text-caption)", color: "var(--color-text-3)", whiteSpace: "nowrap" }}>
-                May 2024 – Jul 2024
-              </span>
+              <span style={{ fontSize: "var(--text-caption)", color: "var(--color-text-3)", whiteSpace: "nowrap" }}>May 2024 – Jul 2024</span>
             </div>
             <ul className="bullet-list">
-              <li>Built an efficient data processing solution using Spring Boot and Spring Batch on a 3M Project, handling 2M+ search data points from Salesforce and SharePoint.</li>
-              <li>Optimized big data pipelines with Apache Airflow and Kafka, achieving a 6% improvement in semantic search processing efficiency.</li>
-              <li>Leveraged Amazon Bedrock + Titan Text Embeddings for NLP and vectorized search for RAG.</li>
-              <li>Implemented kNN vectors (k=5) with lambda functions on OpenSearch; prompt-engineered the Anthropic Claude API for context-relevant responses.</li>
+              <li>Improved Spring Batch runtime by 6% for a search-data pipeline handling 2M+ records by eliminating redundant transformations in a Kafka and Airflow workflow.</li>
+              <li>Integrated Claude API into a RAG pipeline using AWS Bedrock Titan embeddings and OpenSearch kNN retrieval, engineering prompts and API payloads for context-grounded responses.</li>
             </ul>
           </div>
-
-          {/* <div className="card" style={{ position: "relative", overflow: "hidden", padding: "var(--sp-4) var(--sp-4) var(--sp-4) calc(var(--sp-4) + 10px)" }}>
-            <div className="exp-accent-bar" />
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "var(--sp-1)", marginBottom: "var(--sp-2)" }}>
-              <div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "1.125rem", letterSpacing: "var(--ls-tight)" }}>
-                  SS Technology Consultants
-                </h3>
-                <p style={{ fontSize: "var(--text-caption)", color: "var(--color-accent)", margin: 0, fontWeight: 500 }}>
-                  Full Stack Engineer Intern
-                </p>
-              </div>
-              <span style={{ fontSize: "var(--text-caption)", color: "var(--color-text-3)", whiteSpace: "nowrap" }}>
-                Dec 2023 – May 2024
-              </span>
-            </div>
-            <ul className="bullet-list">
-              <li>Led a team of interns to build a REST API with JIRA-managed agile sprints; built CI/CD pipelines using Docker, Kubernetes, Jenkins + Bitbucket, cutting deployment time by 30%.</li>
-              <li>Designed a secure auth system with React, Express, Node.js, and MongoDB using JWT and Bcrypt — eliminating all major authentication vulnerabilities.</li>
-              <li>Automated monitoring tasks in Linux/Unix with Bash scripting to reduce manual setup time.</li>
-            </ul>
-          </div> */}
 
         </div>
       </section>
@@ -291,9 +249,9 @@ const Home = () => {
           gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
           gap: "var(--sp-2)",
         }}>
+          <ProjectCard title="Curiosity" description={["Innovating a novel way to understand, creating a neural map of everything you learn."]} stack="Swift"/>
           <ProjectCard title="Common" description={["Innovative proximity-based social networking application to connect like-minded people."]} stack="Flutter · Dart · Firebase"/>
           <ProjectCard title="Fabric" description={["Utilizing LangGraph, LLMs, A2A, MCP, RAG, and ADK to create a suite of AI Agents to optimize my daily tasks."]} stack="React · Electron · Python · FastAPI · Pydantic · ChromaDB"/>
-          <ProjectCard title="DaVinci Learning Graph" description={["Innovating a novel way to understand, creating a neural map of everything you learn."]} stack=""/>
           <ProjectCard title="Chord Studio" description={["AI-powered music and chord generator, from thought to music in seconds."]} stack="Web Audio API · Next.js · Typescript · Tailwind CSS · OpenAI API"/>
           <ProjectCard title="Siblings or Dating" description={["CNN (MobileNetV2) using transfer learning to classify Reddit images as siblings or dating. Achieved 80% validation accuracy."]} stack="TensorFlow · Keras · Python · CNN · Django"/>
           <ProjectCard title="Akuna Capital Quant Challenge" description={["Python market-making framework integrating nonlinear optimization, stochastic modeling, and RL for adaptive market intelligence."]} stack="Python · RL · Nonlinear Optimization"/>

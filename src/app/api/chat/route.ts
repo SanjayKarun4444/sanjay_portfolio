@@ -63,7 +63,7 @@ export async function POST(req: Request){
         const {stream, handlers} = LangChainStream();
 
         const chatModel = new ChatOpenAI({
-            modelName: "gpt-3.5-turbo",
+            modelName: "gpt-6-luna",
             streaming: true,
             callbacks: [handlers],
             verbose: true,
@@ -89,7 +89,7 @@ export async function POST(req: Request){
         ])
 
         // Use simple chain that respects the context parameter
-        const chain = prompt.pipe(chatModel);
+        const chain = prompt.pipe(chatModel as any);
 
         await chain.invoke({
             input: currentMessageContent,

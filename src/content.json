@@ -1,144 +1,82 @@
 {
   "about": {
-    "bio": "4th year at UVA pursuing a B.S in Computer Science and Minor in Data Science expected by Spring 2026. Passionate about solving problems and learning anything cool.",
+    "name": "Sanjay Karunamoorthy",
+    "bio": "University of Virginia graduate with a B.S. in Computer Science and a minor in Data Science. Builds reliable software, data-intensive systems, and practical AI applications.",
     "skills": {
-      "languages": ["Java", "Python", "C", "JavaScript", "Typescript", "HTML + CSS", "SQL"],
-      "frameworks": ["Spring", "Django", "React", "OpenSearch", "Next.js", "Node.js", "PyTorch", "MongoDB", "Express", "Kafka", "Git", "REST API"]
-    }
+      "languages": ["Python", "Java", "SQL", "C++", "JavaScript", "TypeScript", "HTML", "CSS"],
+      "backendAndDatabases": ["Spring Boot", "Django", "Node.js", "PostgreSQL", "Redis", "Firebase", "Supabase"],
+      "cloudAndInfrastructure": ["AWS Lambda", "AWS Batch", "AWS ECS", "AWS S3", "AWS SQS", "AWS SNS", "Terraform", "Docker", "Kafka", "Airflow"],
+      "toolsAndTesting": ["Git", "JUnit", "Mockito", "Postman"],
+      "aiAndMachineLearning": ["Pandas", "LLMs", "RAG", "Agentic AI"]
+    },
+    "certifications": ["AWS Certified Cloud Practitioner"]
+  },
+  "education": {
+    "institution": "University of Virginia",
+    "school": "School of Engineering",
+    "degree": "Bachelor of Science in Computer Science, Minor in Data Science",
+    "gpa": "3.8",
+    "location": "Charlottesville, VA",
+    "graduation": "May 2026"
   },
   "projects": [
     {
-      "name": "SK-GPT",
+      "name": "Common",
+      "role": "Co-founder",
       "description": [
-        "Implemented ChatGPT from scratch using neural networks with custom backpropagation and gradient descent algorithms."
+        "Engineered a geospatial discovery engine using geohash indexing, adaptive neighbor expansion, and Haversine filtering, ranking up to 500 simulated candidates per request at under 100 ms p95 latency across 1,000-profile Firestore benchmarks.",
+        "Eliminated an N+1 Firestore query pattern using transactionally maintained unread-count aggregates, reducing Inbox document reads by 80% and benchmarked query time from 139 ms to 7 ms."
       ],
-      "stack": "TensorFlow, Python, Neural Networks",
-      "date": "July 2025 – Present"
+      "stack": "Firebase, Firestore, Geohash, Haversine",
+      "links": ["GitHub"]
     },
     {
-      "name": "Micrograd",
+      "name": "Curiosity",
+      "role": "Founder",
       "description": [
-        "Implementing backpropagation over a dynamically built DAG. Creating a neural network from scratch."
+        "Improved discovery content retrieval through lightweight feed projections and lazy-loaded detail endpoints, consolidating up to 37 API requests into a single request per page load.",
+        "Designed a Supabase/PostgreSQL-backed knowledge graph to model concept relationships and learning progress, supporting personalized discovery through graph traversal and semantic embeddings."
       ],
-      "stack": "TensorFlow, Python, Neural Networks, Backpropagation, Gradient Descent",
-      "date": "July 2025 – Present"
+      "stack": "Supabase, PostgreSQL, Semantic Embeddings"
     },
     {
-      "name": "Siblings or Dating – Facial Recognition",
+      "name": "Moving Out",
+      "role": "Undergraduate Researcher",
       "description": [
-        "Created MobileNetV2 CNN with transfer learning, classifying Reddit images using PRAW.",
-        "Achieved 80% validation accuracy with hyperparameter tuning."
+        "Research paper for a Toyota Research Institute-sponsored project.",
+        "Benchmarked MAPPO agents across 12 physics-based maps using BenchMARL, evaluating performance across four collaboration metrics."
       ],
-      "stack": "TensorFlow, Keras, Python, CNN, Django",
-      "date": "March 2025"
-    },
-    {
-      "name": "Akuna Capital Quant Trading Challenge",
-      "description": [
-        "Built Python-based market making framework using nonlinear optimization and stochastic modeling.",
-        "Integrated reinforcement learning for adaptive strategy."
-      ],
-      "stack": "Python, Reinforcement Learning, Nonlinear Optimization",
-      "date": "August 2024"
-    },
-    {
-      "name": "Poker Bot",
-      "description": [
-        "Applied Monte Carlo counterfactual regret minimization to solve 2-player Kuhn Poker."
-      ],
-      "stack": "Python",
-      "date": "June 2024 – July 2024"
-    },
-    {
-      "name": "TenantTalk",
-      "description": [
-        "Web app for rating landlords; followed Scrum with weekly meetings and sprint planning."
-      ],
-      "stack": "Django, PostgreSQL, Heroku, AWS S3",
-      "date": "Jan 2024 – Present"
-    },
-    {
-      "name": "Coccidiosis Classification",
-      "description": [
-        "CNN to classify chicken images and detect Coccidiosis using 1000+ labeled images."
-      ],
-      "stack": "Python, TensorFlow, Azure",
-      "date": "Jan 2024 – March 2024"
-    },
-    {
-      "name": "Film Finder",
-      "description": [
-        "Used Python with NumPy, scikit-learn, Pickle, and TMDB API to recommend films."
-      ],
-      "stack": "Python, TensorFlow",
-      "date": "Sept 2023 – Dec 2023"
-    },
-    {
-      "name": "EzCite",
-      "description": [
-        "Built React + Next.js site; used Perplexity LLM and Node.js (discord.js, Puppeteer).",
-        "Citations generated using citation-machine."
-      ],
-      "stack": "React, Next.js, Node.js, JavaScript, HTML, CSS",
-      "date": "Mar 2024 – Mar 2024"
-    },
-    {
-      "name": "Natural Language Processing Application",
-      "description": [
-        "NER app to extract names, cities, states, countries using Stanford CoreNLP."
-      ],
-      "stack": "Java, Spring Boot",
-      "date": "Nov 2023 – Dec 2023"
-    },
-    {
-      "name": "European Option Pricing",
-      "description": [
-        "Monte Carlo model for pricing vanilla options in C++ using GBM and Box-Muller algorithm.",
-        "Compared results with Black-Scholes model."
-      ],
-      "stack": "C++",
-      "date": "May 2024 – June 2024"
-    },
-    {
-      "name": "EDO.ai",
-      "description": [
-        "Researching models to predict diabetes based on blood test data."
-      ],
-      "stack": "PyTorch",
-      "date": "August 2024 – Present"
+      "stack": "Python, BenchMARL, MAPPO, Multi-Agent Reinforcement Learning",
+      "type": "Paper"
     }
   ],
   "experience": [
+    {
+      "company": "Fannie Mae",
+      "role": "Software Engineer",
+      "date": "July 2026 – Present",
+      "details": [
+        "Reduced event-processing latency in a production ETL pipeline by 38% by migrating XML payload splitting from ECS/AWS Batch to AWS Lambda, eliminating approximately 60 seconds of startup overhead and enabling parallel execution.",
+        "Developing Python- and SQL-based data reconciliation and exception-handling logic for an AWS Aurora-backed loan-processing pipeline, validating record completeness across downstream services and detecting partial data loss."
+      ]
+    },
     {
       "company": "GEICO",
       "role": "Software Development Intern",
       "date": "June 2025 – August 2025",
       "details": [
-        "Pioneered an end-to-end MVP, involving REST APIs, for a Project Development Life Cycle management system based on Shift Left method, scoped to unlock $15M–$20M annually in engineering productivity across 3000+ engineers.",
-        "Partnered with 15+ Senior Directors, VPs, and SMEs in a cross-functional tiger team to design a bi-directional data synchronizing single source of truth system with document parsing, Slack, Azure Devops and Word APIs.",
-        "Automated email notifications by performing a data analysis on DORA metrics by processing 17,000+ repos and fetching 2,000+ system owners using GraphQL and pandas."
+        "Led a team of interns to develop a phase-gated PDLC system that streamlined project intake with LLM-drafted PRDs and risk scores, projected to save $158K annually, deployed to AKS using Terraform and Azure Pipelines CI/CD.",
+        "Architected a Redis cache-aside layer that reduced search latency by 88% (approximately 500 ms to under 60 ms), identifying bottlenecks with Prometheus; cut product-creation latency by 23% by decoupling Azure DevOps ticket creation via RabbitMQ.",
+        "Delivered a GraphQL and pandas automation pipeline to analyze DORA metric data across 17,000+ repositories, identify 2,000+ system owners, and automate targeted email notifications."
       ]
     },
     {
-      "company": "SS Technology",
-      "role": "Software Engineer Intern (Contract)",
+      "company": "SS Technology Consultants Inc",
+      "role": "Software Engineer Intern",
       "date": "May 2024 – July 2024",
       "details": [
-        "Contributed to a data processing solution with Spring Boot and Batch, for 3M handling over 2M search data points.",
-        "Optimized scalable big data pipelines via Kafka + Airflow, leading to a 3% improvement in semantic search time.",
-        "Enhanced a RAG-based system, generating high-dimensional embeddings with AWS Bedrock (Titan Text Embeddings), ",
-                "integrating kNN vector search in OpenSearch, using Claude API prompt engineering for context relevant responses."
-      ]
-    },
-    {
-      "company": "SS Technology",
-      "role": "Full Stack Engineer Intern",
-      "date": "December 2023 – May 2024",
-      "details": [
-        "Led a group of interns to develop a secure REST API using MERN, JWT and Bcrypt. Worked on a CI/CD environment",
-              "for an employee management app incorporating Docker, Kubernetes, Jenkins + Bitbucket.",
-        "Embedded with cross-functional stakeholders in a forward-deployed capacity, translating client requirements into" ,
-                "production-ready MERN features and improving delivery speed and alignment with business needs."
+        "Improved Spring Batch processing runtime by 6% for a 3M search-data pipeline handling over 2 million records by eliminating redundant transformations in a Kafka/Airflow workflow, enabling faster streaming data.",
+        "Integrated the Claude API into a RAG pipeline powered by AWS Bedrock Titan embeddings and OpenSearch kNN retrieval, engineering prompts and API payloads to enable context-grounded response generation."
       ]
     }
   ]
